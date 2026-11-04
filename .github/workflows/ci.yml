@@ -1,0 +1,61 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build_and_test:
+    name: Build, Test And Universal Package
+    runs-on: macos-26-intel
+    timeout-minutes: 45
+    env:
+      DEVELOPER_DIR: /Applications/Xcode_26.2.app/Contents/Developer
+    steps:
+      - name: Check out source without saved credentials
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Test trusted release ref validation
+        shell: bash
+        run: python3 Tests/ReleaseToolingTests/test_release_ref.py
+
+      - name: Verify pinned toolchain
+        shell: bash
+        run: |
+          set -euo pipefail
+          xcodebuild -version
+          swift --version | tee "$RUNNER_TEMP/swift-version.txt"
+          grep -Eq 'Swift version 6\.2([. ]|$)' "$RUNNER_TEMP/swift-version.txt"
+
+      - name: Build and test without release secrets
+        shell: bash
+        run: |
+          set -euo pipefail
+          swift build
+          swift test
+
+      - name: Validate universal local packaging
+        shell: bash
+        env:
+          ARCHES: arm64 x86_64
+          SIGNING_MODE: adhoc
+          APP_BUNDLE_NAME: AppWinkCI
+          APP_DISPLAY_NAME: AppWinkCI
+          BUNDLE_ID: com.kairanpeng.appwink.ci
+        run: |
+          set -euo pipefail
+          ./Scripts/package_app.sh release
+          package_architectures="$(lipo -archs AppWinkCI.app/Contents/MacOS/AppWink)"
+          [[ "$package_architectures" == "arm64 x86_64" || "$package_architectures" == "x86_64 arm64" ]] || exit 1
+          codesign --verify --deep --strict AppWinkCI.app

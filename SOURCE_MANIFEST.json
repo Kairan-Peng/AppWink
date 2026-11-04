@@ -1,0 +1,1148 @@
+{
+  "version": "0.1.44",
+  "build": 45,
+  "source_tree_sha256": "f008a93cbc7f248baf5ba313a6810498132af75579567a2d793449240b13d215",
+  "scope": "reviewed current source without prior Git history or internal operational records",
+  "files": [
+    {
+      "path": ".github/workflows/ci.yml",
+      "sha256": "089de17adc9b82bc160a94c1da7b86715c2f0ff8e9d04aeb0d6a72bd4939ade9",
+      "size": 1789,
+      "executable": false
+    },
+    {
+      "path": ".github/workflows/release.yml",
+      "sha256": "6748716552b9e898f54756811455d7b332f0e441eac42c26f2d3e6acba838c45",
+      "size": 12581,
+      "executable": false
+    },
+    {
+      "path": ".gitignore",
+      "sha256": "926df08528fdc480f685deec822208c6b5a825c00a65bc7f5dcc7534269ffac0",
+      "size": 198,
+      "executable": false
+    },
+    {
+      "path": "AGENTS.md",
+      "sha256": "5e08adc6b9a6ab92ca4c85b71719bcf77064c112aab95712f380230f8acad481",
+      "size": 891,
+      "executable": false
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "sha256": "14ffe1b4330bfef9edb8829ba8063b066a8801603bf726bc459ee0d205447983",
+      "size": 1688,
+      "executable": false
+    },
+    {
+      "path": "Icon.iconset/icon_128x128.png",
+      "sha256": "5405e82bc9f7c5d65a504f044081975e1b7970d009bda8433301b49bd96fbccf",
+      "size": 94736,
+      "executable": false
+    },
+    {
+      "path": "Icon.iconset/icon_128x128@2x.png",
+      "sha256": "1ea88612880707525dbb9a4e4bb6fe227d155a4bca917b9beb8a27efc98e6afd",
+      "size": 269128,
+      "executable": false
+    },
+    {
+      "path": "Icon.iconset/icon_16x16.png",
+      "sha256": "374215299657eb7f67eed82a03770b43bc1c095f8ce78b9cea53acfc059f3f63",
+      "size": 4792,
+      "executable": false
+    },
+    {
+      "path": "Icon.iconset/icon_16x16@2x.png",
+      "sha256": "acd9d702a1ec6ddacbe8dcda2a9648dcab393f0175a863d084c7815e0306255b",
+      "size": 12545,
+      "executable": false
+    },
+    {
+      "path": "Icon.iconset/icon_256x256.png",
+      "sha256": "1ea88612880707525dbb9a4e4bb6fe227d155a4bca917b9beb8a27efc98e6afd",
+      "size": 269128,
+      "executable": false
+    },
+    {
+      "path": "Icon.iconset/icon_256x256@2x.png",
+      "sha256": "02de06088680af682f8b734965ce0302cdfac3a98ef4d65ba0f7beb3cb4a4716",
+      "size": 719462,
+      "executable": false
+    },
+    {
+      "path": "Icon.iconset/icon_32x32.png",
+      "sha256": "acd9d702a1ec6ddacbe8dcda2a9648dcab393f0175a863d084c7815e0306255b",
+      "size": 12545,
+      "executable": false
+    },
+    {
+      "path": "Icon.iconset/icon_32x32@2x.png",
+      "sha256": "4ba6db7e408c55121055b2e4ffc328503fd309d3b622146fccdf21c8ead14e7a",
+      "size": 34248,
+      "executable": false
+    },
+    {
+      "path": "Icon.iconset/icon_512x512.png",
+      "sha256": "02de06088680af682f8b734965ce0302cdfac3a98ef4d65ba0f7beb3cb4a4716",
+      "size": 719462,
+      "executable": false
+    },
+    {
+      "path": "Icon.iconset/icon_512x512@2x.png",
+      "sha256": "324a1ba996fa85e9eb70cc7366b4fb3b67d6fb16ee41bc32433ea3ee5a45edde",
+      "size": 1776219,
+      "executable": false
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "6b4da0b606f964a03ab8d1efca249fba7c46fe66b4684616467b8d3b52431d6a",
+      "size": 35149,
+      "executable": false
+    },
+    {
+      "path": "Package.resolved",
+      "sha256": "778682a688f41b9b1e7444914a4b67f4c547840ff035ef5786ae0e156e97a2de",
+      "size": 391,
+      "executable": false
+    },
+    {
+      "path": "Package.swift",
+      "sha256": "aac9536b5290f433bbf2da5eeee22e2e1f78c3d36c06f51cbef872115b25acd8",
+      "size": 1978,
+      "executable": false
+    },
+    {
+      "path": "README.en.md",
+      "sha256": "896f166cb879aa1a4a08b1c6c4cf084f4030fe788aec9125092e4183b0e881d6",
+      "size": 5094,
+      "executable": false
+    },
+    {
+      "path": "README.md",
+      "sha256": "cad28a691f53991f4eb832647c5535f70fe1f905d2577b4daa6d57b1eb832435",
+      "size": 4071,
+      "executable": false
+    },
+    {
+      "path": "SECURITY.md",
+      "sha256": "fcdd2e624888583da85342714a5e2dc870fd28ea552d27431f28078437fdad0d",
+      "size": 862,
+      "executable": false
+    },
+    {
+      "path": "Scripts/PrivacyInfo.xcprivacy",
+      "sha256": "b267716076963c159b3c25394b6a58aba0e620fe1e81aab51dc078d4a48f7f23",
+      "size": 623,
+      "executable": false
+    },
+    {
+      "path": "Scripts/check_release_ref.sh",
+      "sha256": "8ca001f9c71353872887999064eee459c9297307eb9a65abd471d723405c6eeb",
+      "size": 3665,
+      "executable": true
+    },
+    {
+      "path": "Scripts/compile_and_run.sh",
+      "sha256": "1713b693a5c88d7c3428906f4b7539aba2db5c76cc113f0d6ac95ab8c610f4c2",
+      "size": 2226,
+      "executable": true
+    },
+    {
+      "path": "Scripts/create_dmg.sh",
+      "sha256": "7cb0094686174d753c1faddf1206c94d7e5bfa267353f6f72aade5b9728a27cf",
+      "size": 2926,
+      "executable": true
+    },
+    {
+      "path": "Scripts/create_release_notes.sh",
+      "sha256": "dca5e950707defc2769232cd5117a9f346a79e003947f47379951692b0e63f71",
+      "size": 2541,
+      "executable": true
+    },
+    {
+      "path": "Scripts/entitlements/AppWinkDirect.entitlements",
+      "sha256": "97704a8960b4facceef54397a08fb5d0a456247c3627359215aa2a27df22656c",
+      "size": 181,
+      "executable": false
+    },
+    {
+      "path": "Scripts/export_release_notes.sh",
+      "sha256": "da10c9e16b9aaaa630e41a639f1a02ff434f35f36302f766677fb1e73a9cbe25",
+      "size": 10081,
+      "executable": true
+    },
+    {
+      "path": "Scripts/generate_brand_assets.swift",
+      "sha256": "600d5bf609d84ea005e1c057bd0a3e189cf582b5dcedeed7d2030afcef9e00e6",
+      "size": 6899,
+      "executable": false
+    },
+    {
+      "path": "Scripts/launch.sh",
+      "sha256": "c4ffd898041aa507469e78dddf07bdb76320444545f1f4757fd48a2f88d8bcf3",
+      "size": 971,
+      "executable": true
+    },
+    {
+      "path": "Scripts/licenses/Sparkle-2.9.1-LICENSE.txt",
+      "sha256": "389a4e4e9a32f059775b13a06e25a591445ba229d2838d26dd3e7c0c45127cfe",
+      "size": 6154,
+      "executable": false
+    },
+    {
+      "path": "Scripts/notarize_app.sh",
+      "sha256": "b15e1d881b1f5fb9745c576c513544e1f63ccf283c44055efb99c966f60643e3",
+      "size": 11623,
+      "executable": true
+    },
+    {
+      "path": "Scripts/package_app.sh",
+      "sha256": "9e0bfe74dcbc706c21ea2105e89951f54b880696523c5a2c19906255682d1af5",
+      "size": 13687,
+      "executable": true
+    },
+    {
+      "path": "Scripts/prepare_local_sparkle_artifact.sh",
+      "sha256": "e78d68ea4ed08064fa8410e1facb9604dbe4ccab5866cd2777676150d88aa8e5",
+      "size": 3025,
+      "executable": true
+    },
+    {
+      "path": "Scripts/publish_update_feed.sh",
+      "sha256": "a173abd7727592f9f75b272e6c0d9c95cec2c95d0a5add7eebbd360b7710e2c4",
+      "size": 13301,
+      "executable": true
+    },
+    {
+      "path": "Scripts/release_zip.sh",
+      "sha256": "5ffd071cb1022bc1facab4206d6f14621b6b71b2431082cf953e06a82e7b270e",
+      "size": 5095,
+      "executable": true
+    },
+    {
+      "path": "Sources/AppWink/AccessibilityPermissionChecker.swift",
+      "sha256": "e0fec0464d7d27bd9239c9d6cdb77163d56f1f2c25ec3c8921c88400c902e1d3",
+      "size": 639,
+      "executable": false
+    },
+    {
+      "path": "Sources/AppWink/AccessibilityWindowIdentityResolver.swift",
+      "sha256": "2db889c4939073e7dab21610599797cb065dbe4573dc0ffb2282406a08e354d4",
+      "size": 2050,
+      "executable": false
+    },
+    {
+      "path": "Sources/AppWink/ActivityMonitorHotKeyFeature.swift",
+      "sha256": "b9c92771b9b919ec884f3b020b7c37174d02fdf3095a8af8500c7f1575bd100b",
+      "size": 843,
+      "executable": false
+    },
+    {
+      "path": "Sources/AppWink/AppBrand.swift",
+      "sha256": "c850847cade79b2426f42475b0982ef11680eed7168f08ac1f069fe0a280cdc3",
+      "size": 825,
+      "executable": false
+    },
+    {
+      "path": "Sources/AppWink/AppController.swift",
+      "sha256": "720c4d678c9a2211cf8462b5f4481ebfc4ea4b8ab5683bfc5e7cdaf2b86549e2",
+      "size": 9258,
+      "executable": false
+    },
+    {
+      "path": "Sources/AppWink/AppIconFlashOverlayPanelController.swift",
+      "sha256": "f556407064e63acb3095a9dc246e23a4fdde95a53736a32cc06207f6b954e7c1",
+      "size": 7158,
+      "executable": false
+    },
+    {
+      "path": "Sources/AppWink/AppIconFlashOverlayView.swift",
+      "sha256": "014dc30924fa3af3a438cec86ab5d1bf0825e7f24d46d28e31aeb688be5d8f9f",
+      "size": 721,
+      "executable": false
+    },
+    {
+      "path": "Sources/AppWink/AppModel.swift",
+      "sha256": "d28c5f16d1b8b1e309e2cd00eccee679f5dcee4d537c0126a9e182053b443ed3",
+      "size": 91995,
+      "executable": false
+    },
+    {
+      "path": "Sources/AppWink/AppPresentationProbe.swift",
+      "sha256": "9ef5220f146bab2bc3af13bb3c84921052dfffb4fe3f8e804da6074bc5c3a5f8",
+      "size": 3456,
+      "executable": false
+    },
+    {
+      "path": "Sources/AppWink/AppShortcut+System.swift",
+      "sha256": "7b98770f5799e3f056f826c8444966c178ac75d4bbf6f8913d82d166e9e265dc",
+      "size": 1767,
+      "executable": false
+    },
+    {
+      "path": "Sources/AppWink/AppSwitchingTypes.swift",
+      "sha256": "e075acfd4f7d6f9dc170846867de36f7335a97bf5479b2dc922269044eab6b18",
+      "size": 426,
+      "executable": false
+    },
+    {
+      "path": "Sources/AppWink/AppUpdateCoordinator.swift",
+      "sha256": "84927600df554a2a7599bc36257d021184628aa02f35cdeb29df0e431e197588",
+      "size": 5300,
+      "executable": false
+    },
+    {
+      "path": "Sources/AppWink/AppWindowChromeConfigurator.swift",
+      "sha256": "c907ef42ac91195d2bc2bba2fdbdb596efd904204f3be1cde2e73b1356a494b4",
+      "size": 33099,
+      "executable": false
+    },
+    {
+      "path": "Sources/AppWink/AppWinkAppDelegate.swift",
+      "sha256": "94aa3db74d777870dad2d49e1311f3136f5cbaab65ae007fc69a34969aa57892",
+      "size": 811,
+      "executable": false
+    },
+    {
+      "path": "Sources/AppWink/ApplicationToggleDecisionPolicy.swift",
+      "sha256": "c023d5467036e52f31a482189917430fdbb6fb9335dc7bc3e7305306a680c691",
+      "size": 468,
+      "executable": false
+    },
+    {
+      "path": "Sources/AppWink/ApplicationToggleService.swift",
+      "sha256": "36c8bba48df58fce6f63b0f560ac00cf04ecc398bac1128f942e3486aca12ff7",
+      "size": 42170,
+      "executable": false
+    },
+    {
+      "path": "Sources/AppWink/ApplicationToggleServicing.swift",
+      "sha256": "f4ea7ea6483aaeba46caea21c8dfcf87d35d0d6a9ffa6e5b5087748bb1164147",
+      "size": 1450,
+      "executable": false
+    },
+    {
+      "path": "Sources/AppWink/BindingActionExecutor.swift",
+      "sha256": "465f4e4f048cc0196360683efd2ce195afce87a6216c2b6658e1fc1d25f03072",
+      "size": 8225,
+      "executable": false
+    },
+    {
+      "path": "Sources/AppWink/BindingOpenModeCatalog.swift",
+      "sha256": "9d012498f5fc6c6d294c5b9c350cd119f997b4c167927fe809522b8b49527455",
+      "size": 1763,
+      "executable": false
+    },
+    {
+      "path": "Sources/AppWink/BindingOpenModeMenu.swift",
+      "sha256": "059939dcddf3f5516d91f8f127f8be9862d24ce62e9e553b08fd0c08d9d97763",
+      "size": 18780,
+      "executable": false
+    },
+    {
+      "path": "Sources/AppWink/BindingsListLayout.swift",
+      "sha256": "79f680b44457788dd6b9545818be60910f24feb1390669ce4559db399147e9fa",
+      "size": 665,
+      "executable": false
+    },
+    {
+      "path": "Sources/AppWink/ContentView.swift",
+      "sha256": "a467879ed0b92987f20bdcdf40f4c7831956217b6e81bd1ee49af8241161fe15",
+      "size": 11121,
+      "executable": false
+    },
+    {
+      "path": "Sources/AppWink/DelayedHoverTooltipModifier.swift",
+      "sha256": "e10ca385636df4a5a565b72c065c908f925134c7649d663debd8d2a7c4ea6038",
+      "size": 2881,
+      "executable": false
+    },
+    {
+      "path": "Sources/AppWink/FileSystemOpenService.swift",
+      "sha256": "5de27d3e453c5120a7f1e7fad675a2bce036aa1c76e8e7239718bc3d0b4e9cf7",
+      "size": 6404,
+      "executable": false
+    },
+    {
+      "path": "Sources/AppWink/FinderCurrentSpaceVisibilityPolicy.swift",
+      "sha256": "62e86ec089225855fdd8db6e2a387709bac70dfd3d665a5ff40b3bb5aacab6c1",
+      "size": 369,
+      "executable": false
+    },
+    {
+      "path": "Sources/AppWink/FinderWindowServerWindowFilter.swift",
+      "sha256": "34c7fd72d27dd939f294b254da1c615f2ed1f12c49e07bf8b56d54bfdbd8bff2",
+      "size": 710,
+      "executable": false
+    },
+    {
+      "path": "Sources/AppWink/FinderWindowsCutPasteService.swift",
+      "sha256": "dc7b747d10b34c84747d3c95f46c9606ae91a6439615fc732d2c08718af38125",
+      "size": 7524,
+      "executable": false
+    },
+    {
+      "path": "Sources/AppWink/GlobalHotKeyManager.swift",
+      "sha256": "94e5719fb7266f144f66b0eab46ca97b8d0f0f0f8aca022ec413c879edb53725",
+      "size": 9144,
+      "executable": false
+    },
+    {
+      "path": "Sources/AppWink/HelpContent.swift",
+      "sha256": "5366cadf849178c961a5e8a2551bd492b930e6d2add43e0daff5539d6da0e44f",
+      "size": 1351,
+      "executable": false
+    },
+    {
+      "path": "Sources/AppWink/HiddenBarController.swift",
+      "sha256": "d42d299b4b1ab9b64d62cc764321226b579a64aa5d003570b572e6738e0de337",
+      "size": 10487,
+      "executable": false
+    },
+    {
+      "path": "Sources/AppWink/HotKeyTargetFlashPayload.swift",
+      "sha256": "b7e433a871c1a02ba9fef0a63630321ebaa815281256aae031d931d1d47840e1",
+      "size": 870,
+      "executable": false
+    },
+    {
+      "path": "Sources/AppWink/HotkeyGuideStateStore.swift",
+      "sha256": "6eb0ba7a4997cd1aa3601cb12cf708d3bc52522211f58807834af7453d1a3e79",
+      "size": 534,
+      "executable": false
+    },
+    {
+      "path": "Sources/AppWink/HotkeyTargetPresentation.swift",
+      "sha256": "4751abcda47cb6d5117d16b10ee512c0d504245398d87fc70b9a7a47e4126e45",
+      "size": 17226,
+      "executable": false
+    },
+    {
+      "path": "Sources/AppWink/LaunchAtLoginController.swift",
+      "sha256": "e4371c36b84bd938df36f09297a04615af4769f6ebebd06d982d138d535f9b00",
+      "size": 1955,
+      "executable": false
+    },
+    {
+      "path": "Sources/AppWink/MenuBarContentView.swift",
+      "sha256": "71760fac5dd70fad0af8b2d54d2bd2c144a906d5a7e730d3fcf00f0e819b53ac",
+      "size": 11285,
+      "executable": false
+    },
+    {
+      "path": "Sources/AppWink/MouseWheelScrollPlanner.swift",
+      "sha256": "8793fef861dc1d90398de065021d627de499046ef4184edf3ddddc54a8c24443",
+      "size": 3715,
+      "executable": false
+    },
+    {
+      "path": "Sources/AppWink/MouseWheelScrollService.swift",
+      "sha256": "1fdfb1a53cdd4f2f9f5f1ed922694219650d4592c086f9d402eb6ca90ce6752f",
+      "size": 10406,
+      "executable": false
+    },
+    {
+      "path": "Sources/AppWink/NetworkInterfaceByteReader.swift",
+      "sha256": "b6dbf0dfe6f330ad678bc45403dae279516fdc0344f1fc6369ff9e840ce074d0",
+      "size": 6588,
+      "executable": false
+    },
+    {
+      "path": "Sources/AppWink/NetworkStatusItemController.swift",
+      "sha256": "53370fc3518ecd1959f50a7205e5e677c5933198945d8f6bff544c340b549dbc",
+      "size": 11276,
+      "executable": false
+    },
+    {
+      "path": "Sources/AppWink/NonFinderCurrentSpaceVisibilityPolicy.swift",
+      "sha256": "b19a12de544da8ebaa4612d5b71229c476f855300f2416b074b4968550f3569a",
+      "size": 372,
+      "executable": false
+    },
+    {
+      "path": "Sources/AppWink/OptionKeyHoldController.swift",
+      "sha256": "ee90620a36ecc63e5cae2cb96230eaafea0edfd525d9cec55ea4614832dd1960",
+      "size": 8169,
+      "executable": false
+    },
+    {
+      "path": "Sources/AppWink/PerformanceDiagnostics/PerformanceDiagnosticsClock.swift",
+      "sha256": "60eec71cc2a8fe3934e9520b5e4956dede110b5f6105f07951f7f7af53c483d9",
+      "size": 1192,
+      "executable": false
+    },
+    {
+      "path": "Sources/AppWink/PerformanceDiagnostics/PerformanceDiagnosticsEvent.swift",
+      "sha256": "d05c5beb88ad7236d1ff7af10bece4ffc4abf969a7dbb15d4ec942f68704f28f",
+      "size": 1594,
+      "executable": false
+    },
+    {
+      "path": "Sources/AppWink/PerformanceDiagnostics/PerformanceDiagnosticsRecorder.swift",
+      "sha256": "c33e6efca956966a56bf79daedd3fb196c41d581219365eaea04dad162cfded5",
+      "size": 11106,
+      "executable": false
+    },
+    {
+      "path": "Sources/AppWink/PerformanceDiagnostics/PerformanceDiagnosticsReportExporter.swift",
+      "sha256": "4f62af3f4ae75565be759682eea284f44fe6f66af29f2a0005a5cd36017bbdcf",
+      "size": 10421,
+      "executable": false
+    },
+    {
+      "path": "Sources/AppWink/PerformanceDiagnostics/PerformanceDiagnosticsResourceSnapshot.swift",
+      "sha256": "932d95457642df2b2229448c4bf105a357a1f5f4045631f93864b96e1573421d",
+      "size": 4472,
+      "executable": false
+    },
+    {
+      "path": "Sources/AppWink/PerformanceDiagnostics/PerformanceDiagnosticsSummary.swift",
+      "sha256": "9b3cbd69acc71fc86727f717a48a0ed6095593474c65e2e46ce2277800f1a114",
+      "size": 5986,
+      "executable": false
+    },
+    {
+      "path": "Sources/AppWink/PerformanceDiagnostics/PerformanceDiagnosticsView.swift",
+      "sha256": "bd3424321ed3187c243abb7ce1c4485f41ada8d2ff1c7bdb8e7e9a21ee1eb303",
+      "size": 11435,
+      "executable": false
+    },
+    {
+      "path": "Sources/AppWink/PressedKeysMonitorController.swift",
+      "sha256": "4bf0816d1cd4b1159c47642fb11ac5a8d73e19d094e77c0b6909e58eb0a74a57",
+      "size": 11596,
+      "executable": false
+    },
+    {
+      "path": "Sources/AppWink/PressedKeysOverlayPanelController.swift",
+      "sha256": "1b730f3ac147550576bad8b86898d4fd73e6d4d4a12c6c99f782a64f95ee67be",
+      "size": 4452,
+      "executable": false
+    },
+    {
+      "path": "Sources/AppWink/PressedKeysOverlayState.swift",
+      "sha256": "171556ead79a1afbd060ecf96baada802f685cbb7591681487a449d5a52f4499",
+      "size": 2213,
+      "executable": false
+    },
+    {
+      "path": "Sources/AppWink/PressedKeysOverlayView.swift",
+      "sha256": "1d8689c2938f1c2b9be95d7dea47f19e89044840aa8df47b6470fdabd36dae5a",
+      "size": 1268,
+      "executable": false
+    },
+    {
+      "path": "Sources/AppWink/QuickSwitchOverlayPanelController.swift",
+      "sha256": "d6dab9159e8c0caea829637d972cd2a33e5a4964a208d3ef14fd193bde329b0f",
+      "size": 4308,
+      "executable": false
+    },
+    {
+      "path": "Sources/AppWink/QuickSwitchOverlayView.swift",
+      "sha256": "73e5883ed8cd29ae07d2d0f41dfcc094bea352f3af54d15fa1252851db2a8cd1",
+      "size": 18203,
+      "executable": false
+    },
+    {
+      "path": "Sources/AppWink/SettingsDesignTokens.swift",
+      "sha256": "e7ab3965a7e330d5787d7fa09b05415b107610ee3ce8a1fdade94bb6f3fe867f",
+      "size": 11896,
+      "executable": false
+    },
+    {
+      "path": "Sources/AppWink/SettingsFeatureDetailView.swift",
+      "sha256": "c83963ff7ede972c5514e5ed4a8055eccac99fc5b7d2dd925ed2b68c1a512663",
+      "size": 12912,
+      "executable": false
+    },
+    {
+      "path": "Sources/AppWink/SettingsFeaturePresentation.swift",
+      "sha256": "82e3a2a497e9167662a01371735a91109a1ba378ab1805af741fdaa8deff1afb",
+      "size": 7609,
+      "executable": false
+    },
+    {
+      "path": "Sources/AppWink/SettingsFeatureRow.swift",
+      "sha256": "789e9a0235d9390aa10597b056e3e1acb6164d00d97309bef1e4beafa4225ca3",
+      "size": 2156,
+      "executable": false
+    },
+    {
+      "path": "Sources/AppWink/SettingsHomeView.swift",
+      "sha256": "157f9857bb3560d42132c49ec36c73ab138d4b1c629422678c0b16e9258b91b2",
+      "size": 32520,
+      "executable": false
+    },
+    {
+      "path": "Sources/AppWink/SettingsInteractiveControlStyle.swift",
+      "sha256": "6e32acbec513fadfbfb5c6e431994544b673af23e22d6369654c22d8588bd7b0",
+      "size": 13090,
+      "executable": false
+    },
+    {
+      "path": "Sources/AppWink/SettingsListComponents.swift",
+      "sha256": "f063a8940ec679b5c9f69376b2b8a93ec2aac0ba21c8031bd4192caf5f5dd7b5",
+      "size": 3932,
+      "executable": false
+    },
+    {
+      "path": "Sources/AppWink/SettingsSurfaceStyle.swift",
+      "sha256": "3eb6ac6353b685c600d5c55e70236fc374e25d93dbb1a2089832fbe0f150cfb9",
+      "size": 2852,
+      "executable": false
+    },
+    {
+      "path": "Sources/AppWink/SettingsWindowHomeView.swift",
+      "sha256": "fd02945794c508630f54ba9726fdb5699e66caa4a470a6a75da40ccbc58de80e",
+      "size": 17692,
+      "executable": false
+    },
+    {
+      "path": "Sources/AppWink/SettingsWindowRoute.swift",
+      "sha256": "149d2b87b24531d363f190140cce1b9b5ae4aa0d7be2faaedc0be3ae70bfbedb",
+      "size": 108,
+      "executable": false
+    },
+    {
+      "path": "Sources/AppWink/SettingsWindowView.swift",
+      "sha256": "9ea7679c8cd531e561bb8014764659721a0d5865e50c3e80ed5d5fdff42a03be",
+      "size": 6110,
+      "executable": false
+    },
+    {
+      "path": "Sources/AppWink/ShortcutRecorderField.swift",
+      "sha256": "259eafcab89b9497cb2c08125646e90de789f146680ee8ccbc60dc4e55f5d07c",
+      "size": 17472,
+      "executable": false
+    },
+    {
+      "path": "Sources/AppWink/StatusBarIconProvider.swift",
+      "sha256": "9749d53ee3445497de8f5140a211ff99023c7dc3d1c384cef625e286d4cdda4b",
+      "size": 1814,
+      "executable": false
+    },
+    {
+      "path": "Sources/AppWink/SystemEquivalentActivator.swift",
+      "sha256": "a1b3ed816ef55fdb0fb2c669e045c488a5e7da31673b55687ee69113db9dd66e",
+      "size": 6881,
+      "executable": false
+    },
+    {
+      "path": "Sources/AppWink/ToggleInvocationSource.swift",
+      "sha256": "9cd62f45f913847ac5de084da8ab43a1491a8be39f57c98a98a44883d44299d4",
+      "size": 230,
+      "executable": false
+    },
+    {
+      "path": "Sources/AppWink/ToolboxCatalog.swift",
+      "sha256": "97ccf8c3fe42755326e225c0162bb17856dc65d2ca1006af86f9c1c72c003b19",
+      "size": 8597,
+      "executable": false
+    },
+    {
+      "path": "Sources/AppWink/ToolboxDetailView.swift",
+      "sha256": "b983965fb24b50cbff20305aabb229d89aa83c0a1d9f9007e416b49c78039b92",
+      "size": 3495,
+      "executable": false
+    },
+    {
+      "path": "Sources/AppWink/UpdateSettingsStore.swift",
+      "sha256": "2d464057006c373c1c4d6e365638bb886c141194a52449d7f784772f3765adf8",
+      "size": 693,
+      "executable": false
+    },
+    {
+      "path": "Sources/AppWink/WindowIdentity.swift",
+      "sha256": "a2ff89b96d4a50e6fae9fb63d3b301310f921f61dc4b22ab17ce3ec18fe65384",
+      "size": 128,
+      "executable": false
+    },
+    {
+      "path": "Sources/AppWink/WindowSpaceBridge.swift",
+      "sha256": "1fe5a151f9a3e753ac4af628e1587bea5ad09bbedab1a7f3aa08ff116ddab32f",
+      "size": 5570,
+      "executable": false
+    },
+    {
+      "path": "Sources/AppWinkCore/AppConfiguration.swift",
+      "sha256": "1f268b89114bbfba6ee98748948e4a8eee9355b66d4baabed7fc5889eac535df",
+      "size": 10103,
+      "executable": false
+    },
+    {
+      "path": "Sources/AppWinkCore/AppConfigurationStore.swift",
+      "sha256": "d7661a95491c8bd9c3796a25ad04432bf2cf96f722c289601e8640ae9510eea4",
+      "size": 3867,
+      "executable": false
+    },
+    {
+      "path": "Sources/AppWinkCore/AppShortcut.swift",
+      "sha256": "db36c3ce8cab6f7996eb36287f885129682a4fd967d24e101ea598aaca55c488",
+      "size": 3895,
+      "executable": false
+    },
+    {
+      "path": "Sources/AppWinkCore/HotkeyBinding.swift",
+      "sha256": "af4068561eb4866c36fc871fa6dcf3aea9fc59172b32dc1b3fbe38af704d756c",
+      "size": 2472,
+      "executable": false
+    },
+    {
+      "path": "Sources/AppWinkCore/HotkeyTarget.swift",
+      "sha256": "1b16c4e26cd29240f6eaa9e855985000fe85e816c37622b0ce3c390ef178dfbf",
+      "size": 8293,
+      "executable": false
+    },
+    {
+      "path": "Sources/AppWinkCore/HotkeyTargetFactory.swift",
+      "sha256": "321d161cc4e640ea694d3ffc79d85dfecdf98acbb064529c597e4a6caef0bad8",
+      "size": 1164,
+      "executable": false
+    },
+    {
+      "path": "Sources/AppWinkCore/LocalizationManager.swift",
+      "sha256": "64cb6d72a45ec3b1764e238820db8d513dd3eddf147605dfbec34742b31a7d1e",
+      "size": 20784,
+      "executable": false
+    },
+    {
+      "path": "Sources/AppWinkCore/ManagedApplication.swift",
+      "sha256": "bdee3ac2c2490c9f7cf4c46b77187a359ab4a0c6dc4e9a4e7cc0c4fe7bf29d36",
+      "size": 5348,
+      "executable": false
+    },
+    {
+      "path": "Sources/AppWinkCore/ManagedFileSystemItem.swift",
+      "sha256": "c5503e8b99ac83054bcbaee345fce4036ba5d7635c7f9ca99737d562e2cdfa5d",
+      "size": 3864,
+      "executable": false
+    },
+    {
+      "path": "Sources/AppWinkCore/NetworkThroughput.swift",
+      "sha256": "ae73aa4b1c790a287ed898408749698f0cb68bf14f90a0c9586663b57d2d262a",
+      "size": 3151,
+      "executable": false
+    },
+    {
+      "path": "Sources/AppWinkCore/QuickSwitchKeyboardLayout.swift",
+      "sha256": "45f498a3076664c3ab6798aec8e12b93d234c6c9694840292092534e254dd136",
+      "size": 4205,
+      "executable": false
+    },
+    {
+      "path": "Sources/AppWinkCore/QuickSwitchShortcutPalette.swift",
+      "sha256": "e498cc8b6f170cccc878d300d0aee64d7b204569ff984e49a60151cc72ef5cd2",
+      "size": 1435,
+      "executable": false
+    },
+    {
+      "path": "Sources/AppWinkCore/Resources/en.lproj/Localizable.strings",
+      "sha256": "f99dd2e764b59b523498a903ee6a4f768641a05fa0e1ff1de2c21b6494368c52",
+      "size": 12216,
+      "executable": false
+    },
+    {
+      "path": "Sources/AppWinkCore/Resources/zh-Hans.lproj/Localizable.strings",
+      "sha256": "b91507b1356847dc426e1c36043bd1a46b5b24b559ba71d680a569a2fd08d077",
+      "size": 11773,
+      "executable": false
+    },
+    {
+      "path": "Sources/AppWinkCore/VirtualKeyboardRevealDelay.swift",
+      "sha256": "fd9d75660022820b585f733f3ba7f304f6a1f25ce1f52869f74fc7948f86cd5f",
+      "size": 1238,
+      "executable": false
+    },
+    {
+      "path": "Sources/AppWinkCore/WindowsStyleCutState.swift",
+      "sha256": "679949e5435b06175b85089288d79349feaaad8fa606a9a04157da4606112e7e",
+      "size": 1729,
+      "executable": false
+    },
+    {
+      "path": "Sources/AppWinkDirect/AppUpdateFeed.swift",
+      "sha256": "9f9911c4e7e46b729bed44e0b63734b0dd88636d47de78079a6fe1ab0ac73ba5",
+      "size": 722,
+      "executable": false
+    },
+    {
+      "path": "Sources/AppWinkDirect/AppWinkApp.swift",
+      "sha256": "b8f7541deaafa1d0f4e5dccc6fd96d449b625f9785ac136b112d8a8a3829ce07",
+      "size": 248,
+      "executable": false
+    },
+    {
+      "path": "Sources/AppWinkDirect/SparkleUpdateDriver.swift",
+      "sha256": "0085938da70d0ade4b149f392edf102f4cdd3560352bb22316a11242dc86a690",
+      "size": 1810,
+      "executable": false
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES.md",
+      "sha256": "ae754fe8f65b9109843d219b40c205fb93912cc5b5253b12c8e26586597d6735",
+      "size": 7548,
+      "executable": false
+    },
+    {
+      "path": "Tests/AppWinkCoreTests/AppConfigurationBindingTests.swift",
+      "sha256": "c423d07556572a0d958a0eed867521dcaad9f58efefc38419594b03d444c81de",
+      "size": 14253,
+      "executable": false
+    },
+    {
+      "path": "Tests/AppWinkCoreTests/AppConfigurationReorderingTests.swift",
+      "sha256": "0be911341ba819dd1f911a24d322f70f40987b1bc421ed38d601173d65326336",
+      "size": 3570,
+      "executable": false
+    },
+    {
+      "path": "Tests/AppWinkCoreTests/AppConfigurationStoreTests.swift",
+      "sha256": "168cc389317b1b2f106303bf7c14a83b917fc01b85a227c29e4678cfe252b632",
+      "size": 32252,
+      "executable": false
+    },
+    {
+      "path": "Tests/AppWinkCoreTests/AppShortcutTests.swift",
+      "sha256": "040d8d937644803285e7d71d9a275917f91f944b73337ac6b814f078f721047e",
+      "size": 4155,
+      "executable": false
+    },
+    {
+      "path": "Tests/AppWinkCoreTests/HotkeyBindingTests.swift",
+      "sha256": "08c2677c0366b7c8148d46e86a50dd3a2dddd0ae1a71569913897cd2cd56ff03",
+      "size": 6552,
+      "executable": false
+    },
+    {
+      "path": "Tests/AppWinkCoreTests/HotkeyTargetFactoryTests.swift",
+      "sha256": "9cc76855cbe19ea0408543892387646849993e0446180d7cc9d8e13e5de27d7a",
+      "size": 6108,
+      "executable": false
+    },
+    {
+      "path": "Tests/AppWinkCoreTests/HotkeyTargetTests.swift",
+      "sha256": "04865a2043f95c2f635d37252c36fddee67281ee49d0fc92eebc6e5e9ca96486",
+      "size": 13437,
+      "executable": false
+    },
+    {
+      "path": "Tests/AppWinkCoreTests/LocalizationManagerTests.swift",
+      "sha256": "763e993a2ccbfe09121498e0f4d318154c458389bef57a89f51cbdd556b0ba79",
+      "size": 579,
+      "executable": false
+    },
+    {
+      "path": "Tests/AppWinkCoreTests/ManagedApplicationTests.swift",
+      "sha256": "7bc52106eaa67ec85da6255e20abb216bf3811f10898ed3fbe3273c08670ef15",
+      "size": 8511,
+      "executable": false
+    },
+    {
+      "path": "Tests/AppWinkCoreTests/ManagedFileSystemItemTests.swift",
+      "sha256": "b22e1ae3cf245181a92cb1c31f20d5b109e020c1a7d3fc1e038739abf5c1d5ce",
+      "size": 10597,
+      "executable": false
+    },
+    {
+      "path": "Tests/AppWinkCoreTests/NetworkThroughputTests.swift",
+      "sha256": "9a20a388421bc49654772205d5dc5d51a890b5d64fc9f06265be7bedae25895f",
+      "size": 11120,
+      "executable": false
+    },
+    {
+      "path": "Tests/AppWinkCoreTests/WindowsStyleCutStateTests.swift",
+      "sha256": "077ed8236ce262013c8e1af988ffa6dd7df754b275b04e53f7e3e561ca32914f",
+      "size": 1597,
+      "executable": false
+    },
+    {
+      "path": "Tests/AppWinkTests/AccessibilityPermissionCheckerTests.swift",
+      "sha256": "22610c34f33be75b89c0e3225c58609f14a5c9a745821350925d38c134ab8727",
+      "size": 693,
+      "executable": false
+    },
+    {
+      "path": "Tests/AppWinkTests/AccessibilityWindowIdentityResolverTests.swift",
+      "sha256": "075be91bcb59a1b13dbf0e6d0088ddaa27eecdf1f30f59bb55e3d461bcff50e9",
+      "size": 1789,
+      "executable": false
+    },
+    {
+      "path": "Tests/AppWinkTests/AppIconFlashStyleTests.swift",
+      "sha256": "09dc2e495f79199f48015e314322ca2ccb9a056dfe70dedfb3a162485765a1ae",
+      "size": 503,
+      "executable": false
+    },
+    {
+      "path": "Tests/AppWinkTests/AppModelTests.swift",
+      "sha256": "7a727de047c8d6def57160f0b7f6fc8c25ab8524293cf9a3747957a4095cca6d",
+      "size": 165250,
+      "executable": false
+    },
+    {
+      "path": "Tests/AppWinkTests/AppPresentationProbeTests.swift",
+      "sha256": "033d3e52e320162960feba0f6b9735b5d4336b42cbcf5e7512ee41cac9c1d8da",
+      "size": 2856,
+      "executable": false
+    },
+    {
+      "path": "Tests/AppWinkTests/AppUpdateCoordinatorTests.swift",
+      "sha256": "b2b873507ea022bc3b61eacdf3bf582a6e26c0207184fb46c70f4ab8625fc498",
+      "size": 4930,
+      "executable": false
+    },
+    {
+      "path": "Tests/AppWinkTests/AppWindowForegroundControllerTests.swift",
+      "sha256": "eff00e8dc6d1d2e182f600ce3e62c17b519312e50b03565c71573f1cf7bb8b2e",
+      "size": 829,
+      "executable": false
+    },
+    {
+      "path": "Tests/AppWinkTests/ApplicationToggleDecisionPolicyTests.swift",
+      "sha256": "dc635dca512c0d31eae93f27010748ba5b7aa8f31fd7a51a2d1a24ea57fbf290",
+      "size": 1323,
+      "executable": false
+    },
+    {
+      "path": "Tests/AppWinkTests/ApplicationToggleServiceTests.swift",
+      "sha256": "2fb8ce6e3b562a9f9d3d66e5e00e87918ce63c5b533ab8d5a2547855d3aea519",
+      "size": 1746,
+      "executable": false
+    },
+    {
+      "path": "Tests/AppWinkTests/BindingActionExecutorTests.swift",
+      "sha256": "4ccf37cedc212ecc6a836fa913817e0d636ddc63ea27aeec3401c7c8a857cfc9",
+      "size": 18949,
+      "executable": false
+    },
+    {
+      "path": "Tests/AppWinkTests/BindingOpenModeCatalogTests.swift",
+      "sha256": "eaee200eea8b5a5e2762895cd78190354f188cb6d031bf239e12bf98239c19cf",
+      "size": 7269,
+      "executable": false
+    },
+    {
+      "path": "Tests/AppWinkTests/BindingOpenModeMenuTests.swift",
+      "sha256": "23b2b70ba696c250ed881807c20ff045fca680031ad4f8e7d96c2aa18daa0dd4",
+      "size": 13196,
+      "executable": false
+    },
+    {
+      "path": "Tests/AppWinkTests/BindingReorderPreviewTests.swift",
+      "sha256": "352df891c4d2e6cc2b1c3454efbf6e479d650e89327d6c41e64f78a44e323287",
+      "size": 4149,
+      "executable": false
+    },
+    {
+      "path": "Tests/AppWinkTests/BindingsListLayoutTests.swift",
+      "sha256": "a62f1736bc6610a2436d2373caae3d95f7b78c4e5e3b2d56fc712fbb309f072b",
+      "size": 4219,
+      "executable": false
+    },
+    {
+      "path": "Tests/AppWinkTests/FileSystemOpenServiceTests.swift",
+      "sha256": "8690e3776a31c896f0f1aae930d27fd3606672a837bf9a96d6a7ea7324f96dbf",
+      "size": 25271,
+      "executable": false
+    },
+    {
+      "path": "Tests/AppWinkTests/FinderCurrentSpaceVisibilityPolicyTests.swift",
+      "sha256": "c2da661747d8e21ffeadfcf29bf9c8ea05c1a23f3d0da5c0ade397cede64c91a",
+      "size": 1089,
+      "executable": false
+    },
+    {
+      "path": "Tests/AppWinkTests/FinderWindowServerWindowFilterTests.swift",
+      "sha256": "91e966cd00c8536ef7a1671dcdf1d5e98f988a0f994ab204233f058d13ec07c0",
+      "size": 965,
+      "executable": false
+    },
+    {
+      "path": "Tests/AppWinkTests/GlobalHotKeyManagerTests.swift",
+      "sha256": "f08fd3ffe8a017a1b0a46e71bb1682c618283347407fa18d09b7005f53486dad",
+      "size": 1433,
+      "executable": false
+    },
+    {
+      "path": "Tests/AppWinkTests/HelpContentTests.swift",
+      "sha256": "5d9e0b678e8043ff804f14d1c56a1979773a9a63a382a4364ce6e8c86709fac6",
+      "size": 2457,
+      "executable": false
+    },
+    {
+      "path": "Tests/AppWinkTests/HiddenBarPresentationMetricsTests.swift",
+      "sha256": "2a92da4c53557628895c6e49d93bde450aa5f59c1af9a825a991dffab5aeafa1",
+      "size": 3182,
+      "executable": false
+    },
+    {
+      "path": "Tests/AppWinkTests/HotkeyGuideStateStoreTests.swift",
+      "sha256": "0087031a9aca97345bd4af6caa8f1848c6290d72bbed75ee51674e01d25bad67",
+      "size": 1291,
+      "executable": false
+    },
+    {
+      "path": "Tests/AppWinkTests/HotkeyTargetPresentationResolverTests.swift",
+      "sha256": "8f2084d6a76c0aa97fbd29f11e64b60ad7d0a52b1ae7f38e5522e0b66d2e6e33",
+      "size": 17402,
+      "executable": false
+    },
+    {
+      "path": "Tests/AppWinkTests/HotkeyTargetPresentationTests.swift",
+      "sha256": "eba7bfbb53c34453c47e82cecbb5638639eb88b88735d64478f44b3cf6361ae9",
+      "size": 11368,
+      "executable": false
+    },
+    {
+      "path": "Tests/AppWinkTests/LaunchAtLoginControllerTests.swift",
+      "sha256": "e18065f1107e7d7f01178300065ba2ae078eac16ddeab0b36fdb25648344557c",
+      "size": 710,
+      "executable": false
+    },
+    {
+      "path": "Tests/AppWinkTests/LocalizationCopyTests.swift",
+      "sha256": "1697185b49cc3df98e27f946d45c7c6384693d54f03b38908bc17147d5d00a77",
+      "size": 16495,
+      "executable": false
+    },
+    {
+      "path": "Tests/AppWinkTests/MouseWheelScrollPlannerTests.swift",
+      "sha256": "55181164ead571e319b80e013154fca66334c3da2d8056189ca8b5357069cd8e",
+      "size": 7096,
+      "executable": false
+    },
+    {
+      "path": "Tests/AppWinkTests/NetworkInterfaceByteReaderTests.swift",
+      "sha256": "dfb05b21c353249fa7b3a335aa90326323107ca211880e2d0755bf357d58245a",
+      "size": 9817,
+      "executable": false
+    },
+    {
+      "path": "Tests/AppWinkTests/NetworkStatusItemControllerTests.swift",
+      "sha256": "628f924f5444f0655fb844106a8bd22011ece35a02a188d8d92720ef4661a40e",
+      "size": 24799,
+      "executable": false
+    },
+    {
+      "path": "Tests/AppWinkTests/NonFinderCurrentSpaceVisibilityPolicyTests.swift",
+      "sha256": "a841520a1451af6dca98f1c793ff0b5679ce7b290e733e32789901c0be58cae0",
+      "size": 1125,
+      "executable": false
+    },
+    {
+      "path": "Tests/AppWinkTests/PerformanceDiagnosticsRecorderTests.swift",
+      "sha256": "53283f389f2ba5d9f96563e8514b4b80175a42d8ee5c966bbd1446eb84f0f0e8",
+      "size": 13761,
+      "executable": false
+    },
+    {
+      "path": "Tests/AppWinkTests/PerformanceDiagnosticsReportExporterTests.swift",
+      "sha256": "d978b378e827fd729c3c9f2cda04cd6f566b96ffcbd7d83a60a7ca17ea90ffe5",
+      "size": 15618,
+      "executable": false
+    },
+    {
+      "path": "Tests/AppWinkTests/PerformanceDiagnosticsResourceSnapshotTests.swift",
+      "sha256": "54fb91e6e62de282d7b4c300d8b629aa239666bfb383227e21dec3e3dd96e829",
+      "size": 5221,
+      "executable": false
+    },
+    {
+      "path": "Tests/AppWinkTests/PressedKeysMonitorControllerTests.swift",
+      "sha256": "0f392ff07d5c3562e3aee101314c56414210e3c02c29d893353bd8203af406bf",
+      "size": 4723,
+      "executable": false
+    },
+    {
+      "path": "Tests/AppWinkTests/PressedKeysOverlayStateTests.swift",
+      "sha256": "60a38501461c9f6bb75e5725dc2001d2688f1a3292ae8c7a3549a74af993d5d6",
+      "size": 2609,
+      "executable": false
+    },
+    {
+      "path": "Tests/AppWinkTests/QuickSwitchOverlayStyleTests.swift",
+      "sha256": "a1cf510ec0f98f5ce8238e5873250316e53697afb1777ed8dd3b5ebe6189b25b",
+      "size": 2316,
+      "executable": false
+    },
+    {
+      "path": "Tests/AppWinkTests/SettingsFeatureLayoutTests.swift",
+      "sha256": "ca3d91cb45bc5d2d6fba63a32ffda6ecf7f768d34bf7119857fb295dde3b2dd4",
+      "size": 3876,
+      "executable": false
+    },
+    {
+      "path": "Tests/AppWinkTests/SettingsFeaturePresentationTests.swift",
+      "sha256": "43d639d8c873fa67f9335877deffbb166450659fed9e4fff616b8373c34a49c7",
+      "size": 10991,
+      "executable": false
+    },
+    {
+      "path": "Tests/AppWinkTests/SettingsInteractiveControlStyleTests.swift",
+      "sha256": "21329057b6999737b7ff2349d8353c88db6b3b9ec303c3b30e0a4c738bd2fbdc",
+      "size": 4075,
+      "executable": false
+    },
+    {
+      "path": "Tests/AppWinkTests/ShortcutRecorderFieldTests.swift",
+      "sha256": "e5667fb78310db6757a38f085a9433fd2278f6095026c78b87f138e1e03647d9",
+      "size": 4902,
+      "executable": false
+    },
+    {
+      "path": "Tests/AppWinkTests/SystemEquivalentActivatorTests.swift",
+      "sha256": "1cd317176d8e4a787729c5e0e0e1015d3ad595a57964475216a3fb4ceac685ac",
+      "size": 12368,
+      "executable": false
+    },
+    {
+      "path": "Tests/AppWinkTests/ToolboxCatalogTests.swift",
+      "sha256": "2b1934a48b44e0892aafe5a96806c542e432e930aeb057a9775b7a8c71badd20",
+      "size": 13272,
+      "executable": false
+    },
+    {
+      "path": "Tests/AppWinkTests/UpdateSettingsStoreTests.swift",
+      "sha256": "466856ee599abf1aee04ce77efcc0efe9274937c0ae7de7bd1ba61b052e2c171",
+      "size": 1777,
+      "executable": false
+    },
+    {
+      "path": "Tests/ReleaseToolingTests/test_release_ref.py",
+      "sha256": "f47eb2e15b77a232e05d7547a99fb71b87bd9c4bda0ef71b574ca45350ed9511",
+      "size": 7745,
+      "executable": false
+    },
+    {
+      "path": "docs/PUBLIC_GUIDE.md",
+      "sha256": "a7e62ab8cb4ce88c843bacb5e726287aabdc3e394d1ee062c263d6fe05541a87",
+      "size": 6420,
+      "executable": false
+    },
+    {
+      "path": "docs/README.md",
+      "sha256": "79228810e4cff68ee54db55576f75198b9cb5dc6885c35375fa6e499be9ae7eb",
+      "size": 362,
+      "executable": false
+    },
+    {
+      "path": "docs/releases/TEMPLATE.md",
+      "sha256": "8a627ec04021bb570148520bab124fb2d1d6de664e8391b2f83d98c33bc07396",
+      "size": 345,
+      "executable": false
+    },
+    {
+      "path": "docs/releases/v0.1.44.md",
+      "sha256": "f62ec691d49464fb82dbeb0fb4fb66db79e9f5a755173d2793865a329127674a",
+      "size": 2187,
+      "executable": false
+    },
+    {
+      "path": "version.env",
+      "sha256": "6be54659da36a0d94b9d88ce3484c1dfeb6eaec9779f34fff54aa8518aafba51",
+      "size": 41,
+      "executable": false
+    }
+  ]
+}

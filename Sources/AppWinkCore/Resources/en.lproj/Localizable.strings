@@ -1,0 +1,212 @@
+/*
+  Localizable.strings
+  AppWink - English
+*/
+
+/* General */
+"general.cancel" = "Cancel";
+"general.close" = "Close";
+"general.open" = "Open";
+"general.settings" = "Settings";
+"general.help" = "Help";
+"general.notConfigured" = "Not Configured";
+"general.enabled" = "Enabled";
+"general.disabled" = "Disabled";
+"general.unavailable" = "Unavailable";
+"general.clear" = "Clear";
+
+/* Brand */
+"brand.tagline" = "Apps at your fingertips";
+
+/* Settings */
+"settings.launchAtLogin" = "Launch at Login";
+"settings.launchAtLoginDescription" = "Automatically start %@ after logging in to macOS.";
+"settings.launchAtLoginRequiresApproval" = "Launch at login requested. Please approve %@ in System Settings > General > Login Items.";
+"settings.launchAtLoginUnavailable" = "Login items are not available in this build. Usually requires running from a signed AppWink.app.";
+"settings.language" = "Language";
+"settings.appearanceMode" = "Appearance Mode";
+"settings.windowsStyleCut" = "⌘X Cut";
+"settings.mouseWheelWindowsScroll" = "Wheel Reverse";
+"settings.pressedKeysOverlay" = "Key Display";
+"settings.virtualKeyboard" = "Virtual Keyboard";
+"settings.virtualKeyboardDelayValue" = "%@ s";
+"settings.hiddenBar" = "Hide Menu Bar";
+"settings.networkMonitor" = "Network Monitor";
+"settings.hotKeyIconFlash" = "Hotkey Hint";
+"settings.advancedHotkeys" = "Advanced Hotkeys";
+"settings.activityMonitor" = "Activity Monitor";
+"settings.automaticallyCheckForUpdates" = "Automatically Check for Updates";
+"settings.section.general" = "General";
+"settings.section.features" = "Features";
+"settings.section.aboutUpdates" = "About & Updates";
+"settings.feature.status.enabled" = "Enabled";
+"settings.feature.status.disabled" = "Disabled";
+"settings.feature.status.permissionRequired" = "Permission Required";
+"settings.feature.enable" = "Enable This Feature";
+"settings.feature.section.settings" = "Settings";
+"settings.feature.section.howItWorks" = "How It Works";
+"settings.feature.openHint" = "Open Feature Settings";
+"settings.feature.appliesTo" = "Applies To";
+"settings.feature.shortcut" = "Shortcut";
+"settings.feature.afterCut" = "Copy After Cut";
+"settings.feature.device" = "Device";
+"settings.feature.scrolling" = "Scrolling";
+"settings.feature.unaffected" = "Unaffected";
+"settings.feature.shows" = "Shows";
+"settings.feature.position" = "Position";
+"settings.feature.trigger" = "Trigger";
+"settings.feature.showAfter" = "Show After";
+"settings.feature.control" = "Control";
+"settings.feature.arrangeItems" = "Arrange Items";
+"settings.feature.autoCollapse" = "Auto-Collapse";
+"settings.feature.display" = "Display";
+"settings.feature.source" = "Source";
+"settings.feature.refresh" = "Refresh";
+"settings.feature.duration" = "Duration";
+"settings.feature.behavior" = "Behavior";
+"settings.feature.whenFullscreen" = "Fullscreen / Split View";
+"settings.feature.afterCut.value" = "Cancels the pending cut and uses normal copy behavior.";
+"settings.feature.physicalMouseWheel" = "Physical Mouse Wheel";
+"settings.feature.windowsDirectionSmooth" = "Windows Direction + Smooth";
+"settings.feature.trackpadMagicMouse" = "Trackpad and Magic Mouse";
+"settings.feature.modifiersCombinationsSingleKeys" = "Modifiers, Combinations, and Single Keys";
+"settings.feature.bottomCenterActiveDisplay" = "Bottom Center of the Active Display";
+"settings.feature.holdOption" = "Hold ⌥";
+"settings.feature.menuBarArrow" = "Menu Bar Arrow";
+"settings.feature.commandDragAcrossMarker" = "Command-drag items across the boundary marker. Items on the left are hidden; items on the right stay visible.";
+"settings.feature.thirtySeconds" = "30 Seconds";
+"settings.feature.menuBarUploadAboveDownload" = "Menu Bar, upload above download";
+"settings.feature.primaryNetworkInterface" = "Current primary network interface";
+"settings.feature.everyTwoSeconds" = "Every 2 seconds";
+"settings.feature.appWinkHotkeysOnly" = "AppWink Hotkeys Only";
+"settings.feature.targetAppIconScreenCenter" = "Target App Icon at Screen Center";
+"settings.feature.aboutPoint45Seconds" = "About 0.45 Seconds";
+"settings.feature.activityMonitorBehavior" = "Show when inactive; hide when frontmost in a normal window.";
+"settings.feature.activityMonitorFullscreenNoOp" = "Repeated triggers do nothing.";
+"settings.feature.advancedHotkeysCombinations" = "One or more of ⌘, ⌥, ⌃, ⇧ + A–Z, 0–9, or ` - = [ ] ; ' , . / \\";
+
+/* Settings */
+"toolbox.title" = "Settings";
+"toolbox.featureToggles" = "Feature Toggles";
+"toolbox.other" = "Other";
+"toolbox.windowsStyleCutSummary" = "Finder cut and paste behavior for moving files with `⌘X` and `⌘V`.";
+"toolbox.mouseWheelWindowsScrollSummary" = "Reverse and smooth physical mouse wheel scrolling without changing trackpad or Magic Mouse continuous scrolling.";
+"toolbox.pressedKeysOverlaySummary" = "Show the currently pressed key combination in a bottom-centered overlay.";
+"toolbox.virtualKeyboardSummary" = "Show the virtual keyboard for enabled hotkey bindings after holding Option for the configured duration.";
+"toolbox.hiddenBarSummary" = "When expanded, only icons to the left of the vertical marker are hidden. Hold Command and drag menu bar icons left of the marker; icons to its right stay visible.";
+"toolbox.networkMonitorSummary" = "Shows live upload and download speeds in the menu bar.";
+"toolbox.hotKeyIconFlashSummary" = "Briefly show the target app icon at the center of the screen when an AppWink hotkey fires.";
+"toolbox.activityMonitorSummary" = "Use fixed hotkey `⌃⌘.` to toggle Activity Monitor with the same behavior as normal AppWink hotkeys.";
+"toolbox.advancedHotkeysSummary" = "Records the modifiers you press; bare keys continue to use Option.";
+"toolbox.checkForUpdates" = "Check for Updates…";
+"toolbox.currentVersion" = "Current Version";
+"toolbox.aboutHelp" = "About/Help";
+"toolbox.developmentBuild" = "Development Build";
+
+/* Bindings */
+"bindings.addTarget" = "Add";
+"bindings.chooseTarget" = "Choose Target";
+"bindings.chooseTargetMessage" = "Choose an application, folder, or file to bind a hotkey.";
+"bindings.targetAlreadyExists" = "%@ already exists with this opening mode.";
+"bindings.recordShortcut" = "Press keys";
+"bindings.enableHotkey" = "Enable this target's global shortcut";
+"bindings.disableHotkey" = "Disable this target's global shortcut";
+"bindings.openWith" = "Open With";
+"bindings.openTargetWithApplication" = "Use %@ to open %@";
+"bindings.finderNewTab" = "Finder";
+"bindings.systemDefaultApplication" = "System Default (%@)";
+"bindings.chooseOtherApplication" = "Choose Other Application...";
+"bindings.targetKind.application" = "Application";
+"bindings.targetKind.folder" = "Folder";
+"bindings.targetKind.file" = "File";
+"bindings.action" = "Action";
+"bindings.applicationToggle" = "Activate / Hide";
+"bindings.targetAccessibilityValue" = "%@: %@; %@: %@";
+
+/* Status */
+"status.targetUnavailable" = "Target Unavailable";
+"status.openingApplicationUnavailable" = "Opening Application Unavailable";
+"status.shortcutConflict" = "Shortcut Conflict";
+"status.shortcutConflictWith" = "Shortcut Conflict: %@";
+"status.accessibilityPermissionRequired" = "Accessibility Permission";
+"status.addAccessibilityPermission" = "Permissions";
+"status.openSystemSettings" = "Open System Settings";
+"status.issuesTitle" = "Issues to Resolve";
+"status.targetsUnavailable" = "The following targets are unavailable. Please re-add them if needed: %@";
+"status.shortcutConflictReminder" = "The following enabled shortcuts conflict and won't be registered: %@";
+"status.configurationLoadFailed" = "Failed to load local configuration: %@";
+"status.configurationSaveFailed" = "Failed to save configuration: %@";
+"status.targetAdded" = "Added %@. Configure a shortcut to use it.";
+"status.targetRemoved" = "Removed %@";
+"status.addTargetFailed" = "Failed to save the selected target: %@";
+"status.bindingNotFound" = "The selected target binding could not be found.";
+"status.openSystemSettingsFailed" = "Unable to open System Settings. Please go to Privacy & Security > Accessibility manually.";
+"status.openSystemSettingsSucceeded" = "Opened System Settings. Enable Accessibility for %@.";
+"status.launchAtLoginUpdateFailed" = "Failed to update launch at login: %@";
+"status.launchAtLoginEnabled" = "Launch at login enabled.";
+"status.launchAtLoginDisabled" = "Launch at login disabled.";
+"status.languageUpdated" = "Language set to %@.";
+"status.appearanceModeUpdated" = "Appearance mode set to %@.";
+"status.hotKeyRegistrationFailed" = "Failed to register global shortcuts for these targets: %@";
+"status.windowsStyleCutEnabled" = "⌘X Cut is enabled.";
+"status.windowsStyleCutDisabled" = "⌘X Cut is disabled.";
+"status.windowsStyleCutPermissionRequired" = "⌘X Cut is enabled, but it needs Accessibility permission before it can work.";
+"status.mouseWheelWindowsScrollEnabled" = "Wheel Reverse is enabled.";
+"status.mouseWheelWindowsScrollDisabled" = "Wheel Reverse is disabled.";
+"status.mouseWheelWindowsScrollPermissionRequired" = "Wheel Reverse is enabled, but it needs Accessibility permission before it can work.";
+"status.pressedKeysOverlayEnabled" = "Key Display is enabled.";
+"status.pressedKeysOverlayDisabled" = "Key Display is disabled.";
+"status.pressedKeysOverlayPermissionRequired" = "Key Display is enabled, but it needs Accessibility permission before it can work.";
+"status.virtualKeyboardEnabled" = "Virtual Keyboard is enabled.";
+"status.virtualKeyboardDisabled" = "Virtual Keyboard is disabled.";
+"status.hiddenBarEnabled" = "Hide Menu Bar is enabled.";
+"status.hiddenBarDisabled" = "Hide Menu Bar is disabled.";
+"status.networkMonitorEnabled" = "Network Monitor is enabled.";
+"status.networkMonitorDisabled" = "Network Monitor is disabled.";
+"networkMonitor.accessibilityValue" = "Upload %@, Download %@";
+"status.hotKeyIconFlashEnabled" = "Hotkey Hint is enabled.";
+"status.hotKeyIconFlashDisabled" = "Hotkey Hint is disabled.";
+"status.advancedHotkeysEnabled" = "Advanced Hotkeys is enabled.";
+"status.advancedHotkeysDisabled" = "Advanced Hotkeys is disabled.";
+"status.activityMonitorHotKeyEnabled" = "Activity Monitor fixed hotkey is enabled.";
+"status.activityMonitorHotKeyDisabled" = "Activity Monitor fixed hotkey is disabled.";
+"status.activityMonitorHotKeyPermissionRequired" = "Activity Monitor fixed hotkey is enabled, but it needs Accessibility permission before it can work.";
+
+/* Toggle Results */
+"toggle.activated" = "Switched to %@";
+"toggle.hidden" = "Hidden %@";
+
+/* Errors */
+"error.applicationUnavailable" = "%@ path is invalid. Please re-select the app.";
+"error.launchFailed" = "Failed to launch %@";
+"error.activationFailed" = "Unable to switch focus to %@";
+"error.hideFailed" = "Unable to hide %@";
+
+/* Help */
+"help.hotkeyUsage.title" = "Hotkey Usage";
+"help.featureNotes.title" = "Feature Notes";
+"help.hotkeyUsage.notConfigured" = "Newly added targets start as Not Configured and do not register global hotkeys.";
+"help.hotkeyUsage.chooseTarget" = "Click Add and choose an application, folder, or file to bind.";
+"help.hotkeyUsage.recordShortcut" = "Click the shortcut field, then press a letter or number to record it. Delete or Backspace clears the shortcut.";
+"help.hotkeyUsage.applicationToggle" = "Application hotkeys activate an unfocused app or hide it when it is focused with a normal visible window.";
+"help.hotkeyUsage.finderNewTab" = "Folders open through macOS just as they do when double-clicked in Finder.";
+"help.hotkeyUsage.fileSystemDefault" = "Files open with the current system default application on every trigger.";
+"help.hotkeyUsage.selectedApplication" = "Folders and files can instead open with a selected application.";
+"help.hotkeyUsage.quickSwitch" = "Hold Option for more than 0.5 seconds to show the quick-switch keyboard.";
+"hotkeyGuide.title" = "Hotkey Guide";
+"hotkeyGuide.dismiss" = "Dismiss";
+
+/* Language Selection */
+"language.system" = "System Default";
+"language.chinese" = "简体中文";
+"language.english" = "English";
+
+/* Appearance Mode */
+"appearanceMode.system" = "Follow System";
+"appearanceMode.light" = "Light";
+"appearanceMode.dark" = "Dark";
+
+/* Menu Bar */
+"menu.configureHotkeys" = "Configure Hotkeys";
+"menu.openSettings" = "Open Settings";
+"menu.quitApp" = "Quit %@";

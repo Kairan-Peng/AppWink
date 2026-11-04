@@ -1,0 +1,212 @@
+/*
+  Localizable.strings
+  AppWink - 简体中文
+*/
+
+/* 通用 */
+"general.cancel" = "取消";
+"general.close" = "关闭";
+"general.open" = "打开";
+"general.settings" = "设置";
+"general.help" = "帮助";
+"general.notConfigured" = "未配置";
+"general.enabled" = "启用";
+"general.disabled" = "禁用";
+"general.unavailable" = "不可用";
+"general.clear" = "清除";
+
+/* 品牌 */
+"brand.tagline" = "应用眨眼即达";
+
+/* 设置界面 */
+"settings.launchAtLogin" = "开机自启";
+"settings.launchAtLoginDescription" = "登录 macOS 后自动启动 %@。";
+"settings.launchAtLoginRequiresApproval" = "已请求开启开机自启，请在“系统设置 > 通用 > 登录项”中批准 %@。";
+"settings.launchAtLoginUnavailable" = "当前构建没有可用的登录项，通常需要从已签名的 AppWink.app 运行。";
+"settings.language" = "语言";
+"settings.appearanceMode" = "外观模式";
+"settings.windowsStyleCut" = "⌘X 剪切";
+"settings.mouseWheelWindowsScroll" = "滚轮反向";
+"settings.pressedKeysOverlay" = "按键显示";
+"settings.virtualKeyboard" = "虚拟键盘";
+"settings.virtualKeyboardDelayValue" = "%@ 秒";
+"settings.hiddenBar" = "隐藏菜单栏";
+"settings.networkMonitor" = "网络监控";
+"settings.hotKeyIconFlash" = "热键提示";
+"settings.advancedHotkeys" = "高级热键";
+"settings.activityMonitor" = "活动监视器";
+"settings.automaticallyCheckForUpdates" = "自动检查更新";
+"settings.section.general" = "通用";
+"settings.section.features" = "功能";
+"settings.section.aboutUpdates" = "关于与更新";
+"settings.feature.status.enabled" = "已启用";
+"settings.feature.status.disabled" = "未启用";
+"settings.feature.status.permissionRequired" = "需要权限";
+"settings.feature.enable" = "启用此功能";
+"settings.feature.section.settings" = "设置";
+"settings.feature.section.howItWorks" = "工作方式";
+"settings.feature.openHint" = "打开功能设置";
+"settings.feature.appliesTo" = "适用于";
+"settings.feature.shortcut" = "快捷键";
+"settings.feature.afterCut" = "剪切后复制";
+"settings.feature.device" = "设备";
+"settings.feature.scrolling" = "滚动方式";
+"settings.feature.unaffected" = "不受影响";
+"settings.feature.shows" = "显示内容";
+"settings.feature.position" = "位置";
+"settings.feature.trigger" = "触发方式";
+"settings.feature.showAfter" = "显示延迟";
+"settings.feature.control" = "控制方式";
+"settings.feature.arrangeItems" = "排列图标";
+"settings.feature.autoCollapse" = "自动收起";
+"settings.feature.display" = "显示方式";
+"settings.feature.source" = "来源";
+"settings.feature.refresh" = "刷新";
+"settings.feature.duration" = "显示时长";
+"settings.feature.behavior" = "行为";
+"settings.feature.whenFullscreen" = "全屏 / 分屏";
+"settings.feature.afterCut.value" = "取消待剪切状态并恢复普通复制。";
+"settings.feature.physicalMouseWheel" = "实体鼠标滚轮";
+"settings.feature.windowsDirectionSmooth" = "Windows 方向并平滑滚动";
+"settings.feature.trackpadMagicMouse" = "触控板和 Magic Mouse";
+"settings.feature.modifiersCombinationsSingleKeys" = "修饰键、组合键与单键";
+"settings.feature.bottomCenterActiveDisplay" = "当前显示器底部居中";
+"settings.feature.holdOption" = "长按 ⌥";
+"settings.feature.menuBarArrow" = "菜单栏箭头";
+"settings.feature.commandDragAcrossMarker" = "按住 Command 将图标拖过分界线；左侧图标会隐藏，右侧图标保持显示。";
+"settings.feature.thirtySeconds" = "30 秒";
+"settings.feature.menuBarUploadAboveDownload" = "菜单栏，上行在上、下行在下";
+"settings.feature.primaryNetworkInterface" = "当前主网络接口";
+"settings.feature.everyTwoSeconds" = "每 2 秒";
+"settings.feature.appWinkHotkeysOnly" = "仅 AppWink 热键";
+"settings.feature.targetAppIconScreenCenter" = "屏幕中央的目标应用图标";
+"settings.feature.aboutPoint45Seconds" = "约 0.45 秒";
+"settings.feature.activityMonitorBehavior" = "未在前台时显示；在普通窗口前台时隐藏。";
+"settings.feature.activityMonitorFullscreenNoOp" = "重复触发时不执行操作。";
+"settings.feature.advancedHotkeysCombinations" = "一个或多个 ⌘、⌥、⌃、⇧ + A–Z、0–9 或 ` - = [ ] ; ' , . / \\";
+
+/* 设置 */
+"toolbox.title" = "设置";
+"toolbox.featureToggles" = "功能开关";
+"toolbox.other" = "其他";
+"toolbox.windowsStyleCutSummary" = "在 Finder 里用 `⌘X` 和 `⌘V` 实现剪切后移动文件。";
+"toolbox.mouseWheelWindowsScrollSummary" = "反转并平滑实体鼠标滚轮滚动，不改变触摸板或 Magic Mouse 连续滚动。";
+"toolbox.pressedKeysOverlaySummary" = "显示一个悬浮层，实时展示你当前按下的按键。";
+"toolbox.virtualKeyboardSummary" = "按住 Option 一段时间后展示绑定热键的虚拟键盘，可在设置中调整触发时长。";
+"toolbox.hiddenBarSummary" = "展开后，竖线截止符左侧才是隐藏区。按住 Command 将图标拖到竖线左侧；竖线右侧会保持显示。";
+"toolbox.networkMonitorSummary" = "在菜单栏实时显示本机的上传和下载速度。";
+"toolbox.hotKeyIconFlashSummary" = "触发 AppWink 热键时，在屏幕中央短暂显示目标应用图标。";
+"toolbox.activityMonitorSummary" = "使用固定热键 `⌃⌘.` 切换活动监视器，行为与普通 AppWink 热键一致。";
+"toolbox.advancedHotkeysSummary" = "按实际输入记录修饰键；未输入修饰键时仍自动使用 Option。";
+"toolbox.checkForUpdates" = "检查更新…";
+"toolbox.currentVersion" = "当前版本";
+"toolbox.aboutHelp" = "关于/帮助";
+"toolbox.developmentBuild" = "开发版本";
+
+/* 绑定列表 */
+"bindings.addTarget" = "添加";
+"bindings.chooseTarget" = "选择目标";
+"bindings.chooseTargetMessage" = "选择要绑定热键的应用、文件夹或文件。";
+"bindings.targetAlreadyExists" = "%@ 已存在相同的打开方式。";
+"bindings.recordShortcut" = "请设置";
+"bindings.enableHotkey" = "启用此目标的全局热键";
+"bindings.disableHotkey" = "禁用此目标的全局热键";
+"bindings.openWith" = "打开方式";
+"bindings.openTargetWithApplication" = "使用“%@”打开“%@”";
+"bindings.finderNewTab" = "Finder";
+"bindings.systemDefaultApplication" = "系统默认（%@）";
+"bindings.chooseOtherApplication" = "选择其他应用…";
+"bindings.targetKind.application" = "应用";
+"bindings.targetKind.folder" = "文件夹";
+"bindings.targetKind.file" = "文件";
+"bindings.action" = "操作";
+"bindings.applicationToggle" = "激活 / 隐藏";
+"bindings.targetAccessibilityValue" = "%@：%@；%@：%@";
+
+/* 状态提示 */
+"status.targetUnavailable" = "目标不可用";
+"status.openingApplicationUnavailable" = "打开应用不可用";
+"status.shortcutConflict" = "热键冲突";
+"status.shortcutConflictWith" = "热键冲突：%@";
+"status.accessibilityPermissionRequired" = "辅助功能权限";
+"status.addAccessibilityPermission" = "添加权限";
+"status.openSystemSettings" = "打开系统设置";
+"status.issuesTitle" = "需要处理的问题";
+"status.targetsUnavailable" = "以下目标不可用，如有需要请重新添加：%@";
+"status.shortcutConflictReminder" = "以下已启用热键存在冲突，冲突项不会注册：%@";
+"status.configurationLoadFailed" = "加载本地配置失败：%@";
+"status.configurationSaveFailed" = "保存配置失败：%@";
+"status.targetAdded" = "已添加 %@，请设置热键";
+"status.targetRemoved" = "已移除 %@";
+"status.addTargetFailed" = "保存所选目标失败：%@";
+"status.bindingNotFound" = "未找到对应的目标绑定";
+"status.openSystemSettingsFailed" = "无法打开系统设置，请手动前往“隐私与安全性 > 辅助功能”。";
+"status.openSystemSettingsSucceeded" = "已打开系统设置，请为 %@ 开启辅助功能权限。";
+"status.launchAtLoginUpdateFailed" = "更新开机自启失败：%@";
+"status.launchAtLoginEnabled" = "已开启开机自启";
+"status.launchAtLoginDisabled" = "已关闭开机自启";
+"status.languageUpdated" = "语言已切换为 %@";
+"status.appearanceModeUpdated" = "外观模式已切换为 %@。";
+"status.hotKeyRegistrationFailed" = "以下目标的全局热键注册失败：%@";
+"status.windowsStyleCutEnabled" = "已开启 ⌘X 剪切。";
+"status.windowsStyleCutDisabled" = "已关闭 ⌘X 剪切。";
+"status.windowsStyleCutPermissionRequired" = "已启用 ⌘X 剪切，请开启辅助功能权限后生效。";
+"status.mouseWheelWindowsScrollEnabled" = "已开启滚轮反向。";
+"status.mouseWheelWindowsScrollDisabled" = "已关闭滚轮反向。";
+"status.mouseWheelWindowsScrollPermissionRequired" = "已启用滚轮反向，请开启辅助功能权限后生效。";
+"status.pressedKeysOverlayEnabled" = "已开启按键显示。";
+"status.pressedKeysOverlayDisabled" = "已关闭按键显示。";
+"status.pressedKeysOverlayPermissionRequired" = "已启用按键显示，请开启辅助功能权限后生效。";
+"status.virtualKeyboardEnabled" = "已开启虚拟键盘。";
+"status.virtualKeyboardDisabled" = "已关闭虚拟键盘。";
+"status.hiddenBarEnabled" = "已开启隐藏菜单栏。";
+"status.hiddenBarDisabled" = "已关闭隐藏菜单栏。";
+"status.networkMonitorEnabled" = "已开启网络监控。";
+"status.networkMonitorDisabled" = "已关闭网络监控。";
+"networkMonitor.accessibilityValue" = "上传 %@，下载 %@";
+"status.hotKeyIconFlashEnabled" = "已开启热键提示。";
+"status.hotKeyIconFlashDisabled" = "已关闭热键提示。";
+"status.advancedHotkeysEnabled" = "已开启高级热键。";
+"status.advancedHotkeysDisabled" = "已关闭高级热键。";
+"status.activityMonitorHotKeyEnabled" = "已开启活动监视器固定热键。";
+"status.activityMonitorHotKeyDisabled" = "已关闭活动监视器固定热键。";
+"status.activityMonitorHotKeyPermissionRequired" = "已启用活动监视器固定热键，请开启辅助功能权限后生效。";
+
+/* 切换结果 */
+"toggle.activated" = "已切换到 %@";
+"toggle.hidden" = "已隐藏 %@";
+
+/* 错误信息 */
+"error.applicationUnavailable" = "%@ 的路径无效，请重新选择该应用";
+"error.launchFailed" = "启动 %@ 失败";
+"error.activationFailed" = "无法将焦点切换到 %@";
+"error.hideFailed" = "无法隐藏 %@";
+
+/* 帮助 */
+"help.hotkeyUsage.title" = "热键使用";
+"help.featureNotes.title" = "功能说明";
+"help.hotkeyUsage.notConfigured" = "新添加的目标默认为“未配置”，不会注册全局热键。";
+"help.hotkeyUsage.chooseTarget" = "点击“添加”，选择要绑定的应用、文件夹或文件。";
+"help.hotkeyUsage.recordShortcut" = "点击热键框后，按字母或数字即可记录；Delete 或 Backspace 会清空热键。";
+"help.hotkeyUsage.applicationToggle" = "应用热键会激活未聚焦的应用；应用已聚焦且有普通可见窗口时则隐藏。";
+"help.hotkeyUsage.finderNewTab" = "文件夹由 macOS 直接打开，行为与在 Finder 中双击文件夹一致。";
+"help.hotkeyUsage.fileSystemDefault" = "每次触发文件热键时，都会使用系统当前默认应用打开。";
+"help.hotkeyUsage.selectedApplication" = "文件夹和文件也可以改为使用选定的应用打开。";
+"help.hotkeyUsage.quickSwitch" = "按住 Option 超过 0.5 秒可显示快捷切换键盘。";
+"hotkeyGuide.title" = "热键指南";
+"hotkeyGuide.dismiss" = "关闭";
+
+/* 语言选择 */
+"language.system" = "跟随系统";
+"language.chinese" = "简体中文";
+"language.english" = "English";
+
+/* 外观模式 */
+"appearanceMode.system" = "跟随系统";
+"appearanceMode.light" = "浅色";
+"appearanceMode.dark" = "深色";
+
+/* 菜单栏 */
+"menu.configureHotkeys" = "配置热键";
+"menu.openSettings" = "打开设置";
+"menu.quitApp" = "退出 %@";

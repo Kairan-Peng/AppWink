@@ -1,0 +1,281 @@
+name: Release Candidate
+
+# Dispatch the reviewed workflow on main after an authorized tag is created.
+# A tag must never supply the workflow that receives signing credentials.
+on:
+  workflow_dispatch:
+    inputs:
+      tag_name:
+        description: Existing canonical version tag to prepare as a new draft release
+        required: true
+        type: string
+      checkout_ref:
+        description: Optional main, version tag or full SHA replay; a different ref never creates a release
+        required: false
+        type: string
+
+permissions:
+  contents: read
+
+concurrency:
+  group: appwink-release-candidate
+  cancel-in-progress: false
+
+jobs:
+  preflight:
+    name: Validate Trusted Source And Release Protection
+    if: >-
+      github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/main' &&
+      github.repository_owner == 'Kairan-Peng' && github.event.repository.owner.type == 'User' &&
+      github.actor == github.repository_owner && github.actor_id == github.repository_owner_id &&
+      github.triggering_actor == github.repository_owner
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    permissions:
+      contents: read
+      actions: read
+    outputs:
+      tag_name: ${{ steps.meta.outputs.tag_name }}
+      tag_object_sha: ${{ steps.meta.outputs.tag_object_sha }}
+      source_sha: ${{ steps.meta.outputs.source_sha }}
+      version: ${{ steps.meta.outputs.version }}
+      build_number: ${{ steps.meta.outputs.build_number }}
+      release_basename: ${{ steps.meta.outputs.release_basename }}
+      release_notes_path: ${{ steps.meta.outputs.release_notes_path }}
+      release_title: ${{ steps.meta.outputs.release_title }}
+      should_publish: ${{ steps.meta.outputs.should_publish }}
+    steps:
+      - name: Require the personal repository owner and workflow from main
+        shell: bash
+        env:
+          WORKFLOW_REF: ${{ github.workflow_ref }}
+          REPOSITORY_OWNER: ${{ github.repository_owner }}
+          REPOSITORY_OWNER_ID: ${{ github.repository_owner_id }}
+          OWNER_TYPE: ${{ github.event.repository.owner.type }}
+          ACTOR: ${{ github.actor }}
+          ACTOR_ID: ${{ github.actor_id }}
+          TRIGGERING_ACTOR: ${{ github.triggering_actor }}
+        run: |
+          set -euo pipefail
+          [[ "$REPOSITORY_OWNER" == Kairan-Peng && "$OWNER_TYPE" == User ]] || exit 1
+          [[ "$ACTOR" == "$REPOSITORY_OWNER" && "$TRIGGERING_ACTOR" == "$REPOSITORY_OWNER" ]] || exit 1
+          [[ "$ACTOR_ID" == "$REPOSITORY_OWNER_ID" && -n "$REPOSITORY_OWNER_ID" ]] || exit 1
+          [[ "$WORKFLOW_REF" == "$GITHUB_REPOSITORY/.github/workflows/release.yml@refs/heads/main" ]] || exit 1
+
+      - name: Check out the trusted workflow commit
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: ${{ github.workflow_sha }}
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: Test trusted release ref validation
+        shell: bash
+        run: python3 Tests/ReleaseToolingTests/test_release_ref.py
+
+      - name: Resolve trusted source and literal release metadata
+        id: meta
+        shell: bash
+        env:
+          TAG_NAME: ${{ inputs.tag_name }}
+          CHECKOUT_REF: ${{ inputs.checkout_ref }}
+        run: |
+          set -euo pipefail
+          bash Scripts/check_release_ref.sh "$TAG_NAME" "$CHECKOUT_REF" >> "$GITHUB_OUTPUT"
+
+      # Missing environments, permissions or protections fail before any secret job.
+      - name: Require existing owner-reviewed environments restricted to main
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPOSITORY_OWNER: ${{ github.repository_owner }}
+          REPOSITORY_OWNER_ID: ${{ github.repository_owner_id }}
+        run: |
+          set -euo pipefail
+          for environment in release-signing release-draft; do
+            gh api "repos/$GITHUB_REPOSITORY/environments/$environment" > "$RUNNER_TEMP/environment.json"
+            jq -e --arg owner "$REPOSITORY_OWNER" --arg owner_id "$REPOSITORY_OWNER_ID" '
+              .deployment_branch_policy.protected_branches == false and
+              .deployment_branch_policy.custom_branch_policies == true and
+              any(.protection_rules[];
+                .type == "required_reviewers" and .prevent_self_review == false and
+                (.reviewers | length) == 1 and .reviewers[0].type == "User" and
+                .reviewers[0].reviewer.type == "User" and
+                .reviewers[0].reviewer.login == $owner and
+                (.reviewers[0].reviewer.id | tostring) == $owner_id)
+            ' "$RUNNER_TEMP/environment.json" > /dev/null
+            gh api "repos/$GITHUB_REPOSITORY/environments/$environment/deployment-branch-policies" > "$RUNNER_TEMP/branches.json"
+            jq -e '
+              .total_count == 1 and (.branch_policies | length) == 1 and
+              .branch_policies[0].name == "main" and .branch_policies[0].type == "branch"
+            ' "$RUNNER_TEMP/branches.json" > /dev/null
+          done
+
+  build_and_notarize:
+    name: Build And Notarize Candidate
+    needs: preflight
+    runs-on: macos-26
+    timeout-minutes: 60
+    environment: release-signing
+    env:
+      DEVELOPER_DIR: /Applications/Xcode_26.2.app/Contents/Developer
+      SPARKLE_FEED_URL: https://kairan-peng.github.io/appwink-updates/appcast.xml
+      SPARKLE_PUBLIC_ED_KEY: aqdF9L/R+1sm6aJ8oRsykR2RNzWtR/BywL63fG5tuL8=
+    steps:
+      - name: Check out only the validated commit
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: ${{ needs.preflight.outputs.source_sha }}
+          persist-credentials: false
+
+      - name: Verify pinned toolchain and build source
+        shell: bash
+        env:
+          SOURCE_SHA: ${{ needs.preflight.outputs.source_sha }}
+        run: |
+          set -euo pipefail
+          [[ "$(git rev-parse HEAD)" == "$SOURCE_SHA" ]] || exit 1
+          xcodebuild -version
+          swift --version | tee "$RUNNER_TEMP/swift-version.txt"
+          grep -Eq 'Swift version 6\.2([. ]|$)' "$RUNNER_TEMP/swift-version.txt"
+          swift build
+          swift test
+
+      - name: Import Developer ID certificate into temporary keychain
+        shell: bash
+        env:
+          BUILD_CERTIFICATE_BASE64: ${{ secrets.BUILD_CERTIFICATE_BASE64 }}
+          P12_PASSWORD: ${{ secrets.P12_PASSWORD }}
+          KEYCHAIN_PASSWORD: ${{ secrets.KEYCHAIN_PASSWORD }}
+        run: |
+          set -euo pipefail
+          for var_name in BUILD_CERTIFICATE_BASE64 P12_PASSWORD KEYCHAIN_PASSWORD; do
+            [[ -n "${!var_name:-}" ]] || { echo "Missing required secret: $var_name" >&2; exit 1; }
+          done
+          CERT_PATH="$RUNNER_TEMP/appwink-build-cert.p12"
+          KEYCHAIN_PATH="$RUNNER_TEMP/appwink-signing.keychain-db"
+          echo "KEYCHAIN_PATH=$KEYCHAIN_PATH" >> "$GITHUB_ENV"
+          printf '%s' "$BUILD_CERTIFICATE_BASE64" | base64 --decode > "$CERT_PATH"
+          security create-keychain -p "$KEYCHAIN_PASSWORD" "$KEYCHAIN_PATH"
+          security set-keychain-settings -lut 21600 "$KEYCHAIN_PATH"
+          security unlock-keychain -p "$KEYCHAIN_PASSWORD" "$KEYCHAIN_PATH"
+          security import "$CERT_PATH" -P "$P12_PASSWORD" -A -t cert -f pkcs12 -k "$KEYCHAIN_PATH"
+          rm -f "$CERT_PATH"
+          security set-key-partition-list -S apple-tool:,apple: -s -k "$KEYCHAIN_PASSWORD" "$KEYCHAIN_PATH"
+          security list-keychains -d user -s "$KEYCHAIN_PATH"
+          security default-keychain -d user -s "$KEYCHAIN_PATH"
+          security find-identity -v -p codesigning "$KEYCHAIN_PATH"
+
+      - name: Store notarytool credentials in temporary keychain
+        shell: bash
+        env:
+          APPLE_ID: ${{ secrets.APPLE_ID }}
+          APPLE_APP_SPECIFIC_PASSWORD: ${{ secrets.APPLE_APP_SPECIFIC_PASSWORD }}
+          APPLE_TEAM_ID: ${{ secrets.APPLE_TEAM_ID }}
+        run: |
+          set -euo pipefail
+          for var_name in APPLE_ID APPLE_APP_SPECIFIC_PASSWORD APPLE_TEAM_ID; do
+            [[ -n "${!var_name:-}" ]] || { echo "Missing required secret: $var_name" >&2; exit 1; }
+          done
+          xcrun notarytool store-credentials appwink-ci-notary \
+            --apple-id "$APPLE_ID" \
+            --password "$APPLE_APP_SPECIFIC_PASSWORD" \
+            --team-id "$APPLE_TEAM_ID" \
+            --keychain "$KEYCHAIN_PATH"
+
+      - name: Build notarized universal DMG
+        shell: bash
+        env:
+          APP_IDENTITY: ${{ secrets.APPLE_DEV_IDENTITY }}
+          NOTARY_KEYCHAIN_PROFILE: appwink-ci-notary
+          RELEASE_ARCHES: arm64 x86_64
+          DMG_NAME: ${{ needs.preflight.outputs.release_basename }}
+        run: |
+          set -euo pipefail
+          [[ -n "$APP_IDENTITY" ]] || { echo 'Missing APPLE_DEV_IDENTITY' >&2; exit 1; }
+          NOTARY_KEYCHAIN_PATH="$KEYCHAIN_PATH" ./Scripts/notarize_app.sh --package-format dmg
+          package_architectures="$(lipo -archs AppWink.app/Contents/MacOS/AppWink)"
+          [[ "$package_architectures" == "arm64 x86_64" || "$package_architectures" == "x86_64 arm64" ]] || exit 1
+
+      - name: Verify release checksum portability
+        shell: bash
+        working-directory: dist
+        env:
+          RELEASE_BASENAME: ${{ needs.preflight.outputs.release_basename }}
+        run: |
+          set -euo pipefail
+          shasum -a 256 -c "$RELEASE_BASENAME.dmg.sha256"
+
+      - name: Upload candidate assets
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: release-assets
+          if-no-files-found: error
+          retention-days: 14
+          path: |
+            dist/${{ needs.preflight.outputs.release_basename }}.dmg
+            dist/${{ needs.preflight.outputs.release_basename }}.dmg.sha256
+
+      - name: Remove signing material
+        if: always()
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm -f "$RUNNER_TEMP/appwink-build-cert.p12"
+          if [[ -f "$RUNNER_TEMP/appwink-signing.keychain-db" ]]; then
+            security delete-keychain "$RUNNER_TEMP/appwink-signing.keychain-db"
+          fi
+
+  publish_release:
+    name: Create Draft Release
+    if: needs.preflight.outputs.should_publish == 'true'
+    needs:
+      - preflight
+      - build_and_notarize
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    environment: release-draft
+    permissions:
+      contents: write
+    steps:
+      - name: Check out trusted workflow commit for final ref verification
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: ${{ github.workflow_sha }}
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: Download candidate assets from this run
+        uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2
+        with:
+          name: release-assets
+          path: dist
+
+      - name: Recheck tag and create a new draft without overwriting assets
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG_NAME: ${{ needs.preflight.outputs.tag_name }}
+          TAG_OBJECT_SHA: ${{ needs.preflight.outputs.tag_object_sha }}
+          SOURCE_SHA: ${{ needs.preflight.outputs.source_sha }}
+          RELEASE_TITLE: ${{ needs.preflight.outputs.release_title }}
+          RELEASE_NOTES_PATH: ${{ needs.preflight.outputs.release_notes_path }}
+          RELEASE_BASENAME: ${{ needs.preflight.outputs.release_basename }}
+        run: |
+          set -euo pipefail
+          bash Scripts/check_release_ref.sh "$TAG_NAME" > "$RUNNER_TEMP/rechecked-meta.txt"
+          grep -Fx "source_sha=$SOURCE_SHA" "$RUNNER_TEMP/rechecked-meta.txt"
+          grep -Fx "tag_object_sha=$TAG_OBJECT_SHA" "$RUNNER_TEMP/rechecked-meta.txt"
+          git show "$SOURCE_SHA:$RELEASE_NOTES_PATH" > "$RUNNER_TEMP/release-notes.md"
+          (cd dist && shasum -a 256 -c "$RELEASE_BASENAME.dmg.sha256")
+          # Include drafts, and fail closed on API errors. Never reuse a release/tag.
+          gh api --paginate --slurp "repos/$GITHUB_REPOSITORY/releases?per_page=100" > "$RUNNER_TEMP/releases.json"
+          jq -e --arg tag "$TAG_NAME" 'all(.[][]; .tag_name != $tag)' "$RUNNER_TEMP/releases.json" > /dev/null
+          gh release create "$TAG_NAME" \
+            "dist/$RELEASE_BASENAME.dmg" \
+            "dist/$RELEASE_BASENAME.dmg.sha256" \
+            --repo "$GITHUB_REPOSITORY" \
+            --title "$RELEASE_TITLE" \
+            --notes-file "$RUNNER_TEMP/release-notes.md" \
+            --verify-tag \
+            --draft

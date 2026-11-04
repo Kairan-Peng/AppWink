@@ -1,0 +1,17 @@
+.DS_Store
+.build/
+dist/
+DerivedData/
+*.app
+*.dSYM
+*.dSYM.zip
+AppWink-v*.zip
+*.icns
+*.xcuserstate
+*.xcworkspace
+xcuserdata/
+software-copyright/
+.worktrees/
+/.codex/
+/.superpowers/
+/.local-artifacts/
