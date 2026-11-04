@@ -1,13 +1,13 @@
 {
   "version": "0.1.45",
   "build": 46,
-  "source_tree_sha256": "4666a61689d86c685202257cc8d5318f71176d5cc37a9008a2c7ca7850623737",
+  "source_tree_sha256": "1f216998ef85b259f0b648af35eedb320dbbe663723de4a910c879eaa39dc034",
   "scope": "reviewed current source without prior Git history or internal operational records",
   "files": [
     {
       "path": ".github/workflows/ci.yml",
-      "sha256": "089de17adc9b82bc160a94c1da7b86715c2f0ff8e9d04aeb0d6a72bd4939ade9",
-      "size": 1789,
+      "sha256": "f979a358497e8e02ccb55d5e50361e8257a5bba90ed750f845d6a44297d9fd59",
+      "size": 1783,
       "executable": false
     },
     {
