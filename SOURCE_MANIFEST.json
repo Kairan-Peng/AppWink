@@ -1,7 +1,7 @@
 {
-  "version": "0.1.44",
-  "build": 45,
-  "source_tree_sha256": "f008a93cbc7f248baf5ba313a6810498132af75579567a2d793449240b13d215",
+  "version": "0.1.45",
+  "build": 46,
+  "source_tree_sha256": "4666a61689d86c685202257cc8d5318f71176d5cc37a9008a2c7ca7850623737",
   "scope": "reviewed current source without prior Git history or internal operational records",
   "files": [
     {
@@ -294,8 +294,8 @@
     },
     {
       "path": "Sources/AppWink/AppWindowChromeConfigurator.swift",
-      "sha256": "c907ef42ac91195d2bc2bba2fdbdb596efd904204f3be1cde2e73b1356a494b4",
-      "size": 33099,
+      "sha256": "a13fc2f50356630b4d6ddc738165c104adfde172b4f7cded13beefd68f5575bc",
+      "size": 33325,
       "executable": false
     },
     {
@@ -893,6 +893,12 @@
       "executable": false
     },
     {
+      "path": "Tests/AppWinkTests/AppWindowChromeConfiguratorTests.swift",
+      "sha256": "6f88f8f986b3e5b09689432706542e44501c8fc2ad971ab7f1a4a1c19cdc112f",
+      "size": 4046,
+      "executable": false
+    },
+    {
       "path": "Tests/AppWinkTests/AppWindowForegroundControllerTests.swift",
       "sha256": "eff00e8dc6d1d2e182f600ce3e62c17b519312e50b03565c71573f1cf7bb8b2e",
       "size": 829,
@@ -1116,8 +1122,8 @@
     },
     {
       "path": "docs/PUBLIC_GUIDE.md",
-      "sha256": "a7e62ab8cb4ce88c843bacb5e726287aabdc3e394d1ee062c263d6fe05541a87",
-      "size": 6420,
+      "sha256": "2f8f5462757a9628cd3ae53e8d6e84a58118316a6eb752d2f2dedc44503fd58e",
+      "size": 6887,
       "executable": false
     },
     {
@@ -1139,8 +1145,14 @@
       "executable": false
     },
     {
+      "path": "docs/releases/v0.1.45.md",
+      "sha256": "eadaf8490a167035dae3279ae3787a1dbc1d41eb94e3c6ea914454a8c46d46fd",
+      "size": 1688,
+      "executable": false
+    },
+    {
       "path": "version.env",
-      "sha256": "6be54659da36a0d94b9d88ce3484c1dfeb6eaec9779f34fff54aa8518aafba51",
+      "sha256": "7f6c6152c43eb91045944dcfb137cc552f48e08065885b7794feb53c61cff64b",
       "size": 41,
       "executable": false
     }

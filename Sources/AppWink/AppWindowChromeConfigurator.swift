@@ -266,9 +266,7 @@ struct AppWindowChromeConfigurator: NSViewRepresentable {
             window.minSize = NSSize(width: minWidth, height: minHeight)
 
             configureTitlebarToolbar(for: window)
-            configureContentSafeArea(for: window)
-            configureContentFrame(for: window)
-            configureTitleOverlay(for: window)
+            scheduleWindowLayoutRefresh(for: window)
             configureWindowLayoutObservers(for: window)
             scheduleInitialWindowResizeIfNeeded(for: window)
         }
@@ -307,6 +305,11 @@ struct AppWindowChromeConfigurator: NSViewRepresentable {
 
             contentView.frame = frameView.bounds
             contentView.autoresizingMask = [.width, .height]
+            // SwiftUI can install its hosting view above the native titlebar
+            // after viewDidMoveToWindow. Keep full-size content behind chrome.
+            if frameView.subviews.first !== contentView {
+                frameView.addSubview(contentView, positioned: .below, relativeTo: nil)
+            }
         }
 
         private func configureTitleOverlay(for window: NSWindow) {

@@ -40,6 +40,13 @@ denial/recovery, virtual/pressed keyboard, mouse/Finder helpers, Hidden Bar and
 network monitor. Test relevant Spaces/fullscreen, sleep and hardware behavior.
 Report which checks used injected actions and which used actual system input.
 
+For window chrome changes, check both the hotkey and Settings windows after
+initial launch, close/reopen, resizing and Settings detail/back navigation in
+light and dark appearances. Native close/minimize/zoom controls, window titles
+and help/back accessories must remain above the full-size SwiftUI content.
+Keep native fullscreen titlebar behavior intact. Screen-capture indicators may
+temporarily replace the traffic-light glyphs while a window is being captured.
+
 Privileged features retain Accessibility checks. Folder/file opens do not need
 Finder Automation. Login-item controls reflect real macOS state. The package
 does not request Apple Events or audio capture permission. The privacy manifest
@@ -117,4 +124,4 @@ service operational until affected users have a working free upgrade path.
 
 Report security problems following [SECURITY.md](../SECURITY.md). Review the
 [license](../LICENSE), [third-party notices](../THIRD_PARTY_NOTICES.md) and
-[release notes](releases/v0.1.44.md) before distribution.
+[release notes](releases/v0.1.45.md) before distribution.
