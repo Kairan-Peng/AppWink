@@ -1,7 +1,7 @@
 {
   "version": "0.1.45",
   "build": 46,
-  "source_tree_sha256": "5f4d0a52199e07ed03ece23ca0b3e01058a09f31c3738fb107c3db15e96d6a8e",
+  "source_tree_sha256": "de7e886b89d49ec53e0ffefe1e57c2a6832c438c327b1721afb784bd5c55b62f",
   "scope": "reviewed current source without prior Git history or internal operational records",
   "files": [
     {
@@ -114,14 +114,14 @@
     },
     {
       "path": "README.en.md",
-      "sha256": "896f166cb879aa1a4a08b1c6c4cf084f4030fe788aec9125092e4183b0e881d6",
-      "size": 5094,
+      "sha256": "4c3c1dd043804347a30ff478b8e0cfc602a0d17993f4d71545dbca2a72a5373d",
+      "size": 5022,
       "executable": false
     },
     {
       "path": "README.md",
-      "sha256": "cad28a691f53991f4eb832647c5535f70fe1f905d2577b4daa6d57b1eb832435",
-      "size": 4071,
+      "sha256": "324a964852ca30e25a968b4961dfa8f2d51c2e6da983d9e06afbf35a95368c99",
+      "size": 4140,
       "executable": false
     },
     {
