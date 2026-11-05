@@ -6,7 +6,7 @@ AppWink 是一个免费开源的 macOS 小工具，帮助从 Windows 转来的�
 
 支持应用、文件夹和文件快捷键，以及键盘显示、鼠标滚轮、Finder、菜单栏和网络监控等实用功能。当前源码无需购买、试用、激活或登录。
 
-> 当前状态：保留 **0.1.43** 功能范围的 **0.1.44** 开源候选版，免费安装包尚未发布；首个免费版发布后会在这里提供明确下载入口。
+> 最新版本：[0.1.45](https://github.com/Kairan-Peng/AppWink/releases/tag/v0.1.45)。[下载 universal DMG](https://github.com/Kairan-Peng/AppWink/releases/download/v0.1.45/AppWink-v0.1.45-build46-mac.dmg) · [SHA-256](https://github.com/Kairan-Peng/AppWink/releases/download/v0.1.45/AppWink-v0.1.45-build46-mac.dmg.sha256)
 
 ## 功能
 
@@ -22,13 +22,13 @@ AppWink 提供专注的热键配置窗口和独立设置窗口。
 ## 系统与安装
 
 - macOS 14.0 或更新版本。
-- 官方发行计划继续提供 Apple Silicon / Intel universal 安装包，并保留 Developer ID 签名、Apple 公证和自动更新。
-- 后续仅通过 [GitHub Releases](https://github.com/Kairan-Peng/AppWink/releases) 分发，不推进 App Store 上架。
-- 免费版正式发布后：下载该免费版本的 `.dmg`，将 AppWink 拖入 Applications，再从 Applications 启动。GitHub 的 Source code ZIP 是源码。
+- 官方安装包兼容 Apple Silicon / Intel，保留 Developer ID 签名、Apple 公证和自动更新。
+- 通过 [GitHub Releases](https://github.com/Kairan-Peng/AppWink/releases) 分发，不提供 App Store 版本。
+- 下载最新版本的 `.dmg`，将 AppWink 拖入 Applications，再从 Applications 启动。GitHub 的 Source code ZIP 是源码。
 
 部分功能需要 macOS 辅助功能权限。文件夹/文件打开不要求辅助功能或 Finder Automation；访问受保护位置时，macOS 可能单独询问文件权限。请按 App 内提示在系统设置中授权。
 
-旧用户的快捷键、打开方式、排序、语言、外观和开关继续保存在本机。旧商业授权缓存不再影响功能，也不会要求重新激活。正式升级前仍需完成签名/TCC 与 Sparkle 安装验收；当前准备版不会自动替换你的安装。
+旧用户的快捷键、打开方式、排序、语言、外观和开关继续保存在本机。旧商业授权缓存不再影响功能，也不会要求重新激活。升级前建议保留本机配置备份，升级后可检查系统辅助功能与登录项状态。
 
 ## 从源码构建
 

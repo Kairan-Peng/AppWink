@@ -6,7 +6,7 @@ AppWink is a free, open-source macOS utility that helps people coming from Windo
 
 It offers shortcuts for apps, folders, and files, along with practical tools for displaying keystrokes, adjusting mouse scrolling, working with Finder, managing menu bar icons, and monitoring network speed. The current source requires no purchase, trial, activation, or sign-in.
 
-> Current status: the **0.1.44** open-source release candidate, retaining the feature scope of **0.1.43**. The free installer has not been released; a clear download link will be added here when the first free version is available.
+> Latest release: [0.1.45](https://github.com/Kairan-Peng/AppWink/releases/tag/v0.1.45). [Download universal DMG](https://github.com/Kairan-Peng/AppWink/releases/download/v0.1.45/AppWink-v0.1.45-build46-mac.dmg) · [SHA-256](https://github.com/Kairan-Peng/AppWink/releases/download/v0.1.45/AppWink-v0.1.45-build46-mac.dmg.sha256)
 
 ## Features
 
@@ -22,13 +22,13 @@ AppWink has a focused hotkey configuration window and a separate Settings window
 ## System requirements and installation
 
 - macOS 14.0 or later.
-- Official releases are planned to continue providing universal installers for Apple Silicon and Intel, with Developer ID signing, Apple notarization, and automatic updates.
-- Future releases will be distributed through [GitHub Releases](https://github.com/Kairan-Peng/AppWink/releases) only. App Store distribution is no longer planned.
-- Once the free version is officially released, download its `.dmg`, drag AppWink into Applications, and launch it from there. GitHub's Source code ZIP contains the source code.
+- Official universal installers support Apple Silicon and Intel, with Developer ID signing, Apple notarization, and automatic updates.
+- Releases are distributed through [GitHub Releases](https://github.com/Kairan-Peng/AppWink/releases). No App Store version is provided.
+- Download the latest `.dmg`, drag AppWink into Applications, and launch it from there. GitHub's Source code ZIP contains the source code.
 
 Some features need macOS Accessibility permission. Opening folders and files does not require Accessibility or Finder Automation; macOS may ask separately for file access when you open protected locations. Follow the app's prompts to grant permissions in System Settings.
 
-Existing users' shortcuts, opening preferences, ordering, language, appearance, and feature switches remain stored locally. Old commercial license caches no longer affect features, and reactivation is not required. Signing/TCC checks and Sparkle installation verification are still needed before an official upgrade; this preparation build does not automatically replace your installed app.
+Existing users' shortcuts, opening preferences, ordering, language, appearance, and feature switches remain stored locally. Old commercial license caches no longer affect features, and reactivation is not required. Keep a backup of your local configuration before upgrading, and check Accessibility and Login Items afterward.
 
 ## Building from source
 
