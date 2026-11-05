@@ -239,7 +239,9 @@ final class NetworkStatusItemControllerTests: XCTestCase {
         }
     }
 
-    func testEnableTwiceInstallsSamplesAndSchedulesOnlyOnce() {
+    // A Task avoids Swift 6.2 isolated-deinit back-deployment crashes in
+    // synchronous XCTest bodies on older macOS (swiftlang/swift#85663).
+    func testEnableTwiceInstallsSamplesAndSchedulesOnlyOnce() async {
         let fixture = makeFixture(results: [.success(nil)])
 
         fixture.controller.setEnabled(true)
@@ -255,7 +257,7 @@ final class NetworkStatusItemControllerTests: XCTestCase {
         )
     }
 
-    func testAccessibilityTextUsesCurrentLanguageForEachPresentation() {
+    func testAccessibilityTextUsesCurrentLanguageForEachPresentation() async {
         var languageMarker = "en"
         let reader = ReaderStub(results: [.success(nil), .success(nil)])
         let display = DisplaySpy()
@@ -283,7 +285,7 @@ final class NetworkStatusItemControllerTests: XCTestCase {
         )
     }
 
-    func testComparableSnapshotsUseActualElapsedTimeAndDirectionMapping() {
+    func testComparableSnapshotsUseActualElapsedTimeAndDirectionMapping() async {
         let start = ContinuousClock().now
         let fixture = makeFixture(results: [
             .success(snapshot(name: "en0", received: 10_000, sent: 20_000, at: start)),
@@ -306,7 +308,7 @@ final class NetworkStatusItemControllerTests: XCTestCase {
         )
     }
 
-    func testDisableInvalidatesRemovesAndClearsBaselineBeforeReenable() {
+    func testDisableInvalidatesRemovesAndClearsBaselineBeforeReenable() async {
         let start = ContinuousClock().now
         let fixture = makeFixture(results: [
             .success(snapshot(name: "en0", received: 1_000, sent: 2_000, at: start)),
@@ -337,7 +339,7 @@ final class NetworkStatusItemControllerTests: XCTestCase {
         XCTAssertEqual(fixture.display.presentations.last?.bottomText, "0 KB/s")
     }
 
-    func testQueuedTickFromPreviousEnableCycleCannotSampleAfterReenable() {
+    func testQueuedTickFromPreviousEnableCycleCannotSampleAfterReenable() async {
         let start = ContinuousClock().now
         let fixture = makeFixture(results: [
             .success(snapshot(name: "en0", received: 1_000, sent: 2_000, at: start)),
@@ -373,7 +375,7 @@ final class NetworkStatusItemControllerTests: XCTestCase {
         XCTAssertEqual(fixture.display.presentations.last?.bottomText, "2 KB/s")
     }
 
-    func testReadFailureShowsUnavailableAndNextSuccessRebaselinesAtZero() {
+    func testReadFailureShowsUnavailableAndNextSuccessRebaselinesAtZero() async {
         let start = ContinuousClock().now
         let fixture = makeFixture(results: [
             .success(snapshot(name: "en0", received: 1_000, sent: 2_000, at: start)),
@@ -400,7 +402,7 @@ final class NetworkStatusItemControllerTests: XCTestCase {
         )
     }
 
-    func testNilPrimaryInterfaceShowsZeroAndResetsExistingBaseline() {
+    func testNilPrimaryInterfaceShowsZeroAndResetsExistingBaseline() async {
         let start = ContinuousClock().now
         let fixture = makeFixture(results: [
             .success(snapshot(name: "en0", received: 1_000, sent: 2_000, at: start)),
@@ -434,7 +436,7 @@ final class NetworkStatusItemControllerTests: XCTestCase {
         )
     }
 
-    func testTeardownTwiceIsIdempotent() {
+    func testTeardownTwiceIsIdempotent() async {
         let fixture = makeFixture(results: [.success(nil)])
         fixture.controller.setEnabled(true)
 
@@ -445,7 +447,7 @@ final class NetworkStatusItemControllerTests: XCTestCase {
         XCTAssertEqual(fixture.display.removeCount, 1)
     }
 
-    func testTeardownWhileDisabledHasNoSideEffects() {
+    func testTeardownWhileDisabledHasNoSideEffects() async {
         let fixture = makeFixture()
 
         fixture.controller.teardown()
@@ -457,7 +459,7 @@ final class NetworkStatusItemControllerTests: XCTestCase {
         XCTAssertTrue(fixture.timers.tokens.isEmpty)
     }
 
-    func testReleaseWhileEnabledInvalidatesTimerAndRemovesDisplay() {
+    func testReleaseWhileEnabledInvalidatesTimerAndRemovesDisplay() async {
         let reader = ReaderStub(results: [.success(nil)])
         let display = DisplaySpy()
         let timers = TimerSchedulerSpy()
@@ -475,7 +477,7 @@ final class NetworkStatusItemControllerTests: XCTestCase {
         XCTAssertEqual(display.removeCount, 1)
     }
 
-    func testReleaseAfterDisableDoesNotCleanUpTwice() {
+    func testReleaseAfterDisableDoesNotCleanUpTwice() async {
         let reader = ReaderStub(results: [.success(nil)])
         let display = DisplaySpy()
         let timers = TimerSchedulerSpy()
@@ -494,7 +496,7 @@ final class NetworkStatusItemControllerTests: XCTestCase {
         XCTAssertEqual(display.removeCount, 1)
     }
 
-    func testQueuedTimerTickAfterDisableDoesNotReadOrUpdateRemovedDisplay() {
+    func testQueuedTimerTickAfterDisableDoesNotReadOrUpdateRemovedDisplay() async {
         let fixture = makeFixture(results: [
             .success(nil),
             .failure(.failed),
