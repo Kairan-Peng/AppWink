@@ -45,18 +45,6 @@ jobs:
           swift build
           swift test
 
-      - name: Diagnose XCTest process failures
-        if: failure()
-        shell: bash
-        run: |
-          swift test --skip-build --filter NetworkStatusItemControllerTests.testAccessibilityTextUsesCurrentLanguageForEachPresentation || true
-          crash_directory="$HOME/Library/Logs/DiagnosticReports"
-          if [[ -d "$crash_directory" ]]; then
-            find "$crash_directory" -maxdepth 1 -type f \
-              \( -name '*AppWink*.ips' -o -name '*xctest*.ips' -o -name '*AppWink*.crash' -o -name '*xctest*.crash' \) \
-              -mmin -15 -print -exec cat {} \;
-          fi
-
       - name: Validate universal local packaging
         shell: bash
         env:

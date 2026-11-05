@@ -1,13 +1,13 @@
 {
   "version": "0.1.45",
   "build": 46,
-  "source_tree_sha256": "3131cf627d429a5b9e80bed0acccdb57e52d35cf12a44302245a7f37e52d7920",
+  "source_tree_sha256": "5f4d0a52199e07ed03ece23ca0b3e01058a09f31c3738fb107c3db15e96d6a8e",
   "scope": "reviewed current source without prior Git history or internal operational records",
   "files": [
     {
       "path": ".github/workflows/ci.yml",
-      "sha256": "440cea4300a6ab9abf9b7871b3b661193caf801e8d91a690e26df2ed486cbb63",
-      "size": 2389,
+      "sha256": "ef94ce25e3603a80df52ace96a21f26433cd4a5575b3440f9beba9353ed974f9",
+      "size": 1789,
       "executable": false
     },
     {
@@ -1026,8 +1026,8 @@
     },
     {
       "path": "Tests/AppWinkTests/NetworkStatusItemControllerTests.swift",
-      "sha256": "628f924f5444f0655fb844106a8bd22011ece35a02a188d8d92720ef4661a40e",
-      "size": 24799,
+      "sha256": "64b4b444a6291cdda0a7781430b8b0e64bf830ebebfa92ce5a696ae3f81abc0c",
+      "size": 25018,
       "executable": false
     },
     {
