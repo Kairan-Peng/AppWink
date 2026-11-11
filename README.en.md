@@ -8,6 +8,20 @@ It offers shortcuts for apps, folders, and files, along with practical tools for
 
 > Latest release: [0.1.45](https://github.com/Kairan-Peng/AppWink/releases/tag/v0.1.45). [Download universal DMG](https://github.com/Kairan-Peng/AppWink/releases/download/v0.1.45/AppWink-v0.1.45-build46-mac.dmg) · [SHA-256](https://github.com/Kairan-Peng/AppWink/releases/download/v0.1.45/AppWink-v0.1.45-build46-mac.dmg.sha256)
 
+## Screenshots
+
+### Hotkey configuration
+
+Keep your favorite apps, folders, and files together, and give each a shortcut that feels natural.
+
+![AppWink hotkey configuration window with app bindings, shortcuts, and individual switches](docs/images/hotkey-configuration.jpg)
+
+### Virtual keyboard
+
+Hold `⌥ Option` to see your app bindings right on the keyboard. Find an app at a glance, then press its key to switch.
+
+![AppWink virtual keyboard showing bound app icons on their corresponding keys](docs/images/virtual-keyboard.jpg)
+
 ## Features
 
 - Assign global shortcuts to individual apps, folders, and files, using the default `⌥ + letter/number` combinations or optional advanced combinations.
