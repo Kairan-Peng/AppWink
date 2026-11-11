@@ -28,6 +28,26 @@ Packaging without an architecture list builds for the host. Formal release
 scripts build universal arm64/x86_64. The package uses actual SwiftPM scratch
 outputs; do not copy a guessed old binary into a new app bundle.
 
+## Application icon
+
+The application icon uses the cobalt-blue winking keycap design. Its source
+master is `Artwork/AppWink-Icon-Source.png`; keep it square, opaque/full bleed
+and at least 1024 pixels. The exporter adds the rounded outline and transparent
+padding consistently at every size, avoiding generated cutout noise.
+Regenerate the ten standard iconset images with:
+
+```bash
+swift Scripts/generate_brand_assets.swift
+iconutil --convert icns --output Icon.icns Icon.iconset
+```
+
+Packaging runs the generator and embeds the resulting `Icon.icns` automatically.
+The exporter uses exact pixel dimensions independently of the display's Retina
+scale. `Icon.icns` remains an ignored build artifact. Preview 16/32/64-pixel
+images and inspect an isolated app bundle after changing the master. The menu
+bar's monochrome template icon is maintained separately in
+`StatusBarIconProvider.swift`.
+
 ## Runtime checks
 
 Use a separately named/bundled QA app and preseed its configuration. The
