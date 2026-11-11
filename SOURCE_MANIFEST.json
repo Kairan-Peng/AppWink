@@ -1,7 +1,7 @@
 {
-  "version": "0.1.45",
-  "build": 46,
-  "source_tree_sha256": "de7e886b89d49ec53e0ffefe1e57c2a6832c438c327b1721afb784bd5c55b62f",
+  "version": "0.1.46",
+  "build": 47,
+  "source_tree_sha256": "9b9d8f482a4c955ded6209896382fac4d9ef9f5f470f269ac2e15699e5b0b0eb",
   "scope": "reviewed current source without prior Git history or internal operational records",
   "files": [
     {
@@ -29,6 +29,24 @@
       "executable": false
     },
     {
+      "path": "Artwork/AppWink-Icon-Source.png",
+      "sha256": "b0b3aa941101406d0513da1934707c97b5542d30ef0af5fca2b3e6670d30a326",
+      "size": 1393811,
+      "executable": false
+    },
+    {
+      "path": "Artwork/README.md",
+      "sha256": "94615ba55c0e9a401565698bb491efeba18e896a11a6efe5d1d9af5bf97ac487",
+      "size": 854,
+      "executable": false
+    },
+    {
+      "path": "Artwork/icon-source-prompt.txt",
+      "sha256": "3ab3376c99fc04315811c274acb4b2628c6a9948df67ab0e9f7b0476302c4f8b",
+      "size": 1710,
+      "executable": false
+    },
+    {
       "path": "CONTRIBUTING.md",
       "sha256": "14ffe1b4330bfef9edb8829ba8063b066a8801603bf726bc459ee0d205447983",
       "size": 1688,
@@ -36,62 +54,62 @@
     },
     {
       "path": "Icon.iconset/icon_128x128.png",
-      "sha256": "5405e82bc9f7c5d65a504f044081975e1b7970d009bda8433301b49bd96fbccf",
-      "size": 94736,
+      "sha256": "d4e8e2c88fa70dbe4820091e79ee4f93e20f2670f858e6ac01d0a9055efaf7d2",
+      "size": 14887,
       "executable": false
     },
     {
       "path": "Icon.iconset/icon_128x128@2x.png",
-      "sha256": "1ea88612880707525dbb9a4e4bb6fe227d155a4bca917b9beb8a27efc98e6afd",
-      "size": 269128,
+      "sha256": "c3f86a2fda79b9b2e4465ef89a11cbffae89463e0296fd98bb9b7230a1b3c2b3",
+      "size": 52307,
       "executable": false
     },
     {
       "path": "Icon.iconset/icon_16x16.png",
-      "sha256": "374215299657eb7f67eed82a03770b43bc1c095f8ce78b9cea53acfc059f3f63",
-      "size": 4792,
+      "sha256": "b4841a2113875c188fe9b4bb83f550baea721b63a12fea81e5e8653eb9f57fa2",
+      "size": 716,
       "executable": false
     },
     {
       "path": "Icon.iconset/icon_16x16@2x.png",
-      "sha256": "acd9d702a1ec6ddacbe8dcda2a9648dcab393f0175a863d084c7815e0306255b",
-      "size": 12545,
+      "sha256": "c7e4433ca11fd2d0ad025435d81351e7f225150b6b4a856d9a01d030e0c3d646",
+      "size": 1666,
       "executable": false
     },
     {
       "path": "Icon.iconset/icon_256x256.png",
-      "sha256": "1ea88612880707525dbb9a4e4bb6fe227d155a4bca917b9beb8a27efc98e6afd",
-      "size": 269128,
+      "sha256": "c3f86a2fda79b9b2e4465ef89a11cbffae89463e0296fd98bb9b7230a1b3c2b3",
+      "size": 52307,
       "executable": false
     },
     {
       "path": "Icon.iconset/icon_256x256@2x.png",
-      "sha256": "02de06088680af682f8b734965ce0302cdfac3a98ef4d65ba0f7beb3cb4a4716",
-      "size": 719462,
+      "sha256": "0dae862aa75829a696139500a9eb55d6b1bd773ced1eef1d57e38f4340d9d1a0",
+      "size": 218762,
       "executable": false
     },
     {
       "path": "Icon.iconset/icon_32x32.png",
-      "sha256": "acd9d702a1ec6ddacbe8dcda2a9648dcab393f0175a863d084c7815e0306255b",
-      "size": 12545,
+      "sha256": "c7e4433ca11fd2d0ad025435d81351e7f225150b6b4a856d9a01d030e0c3d646",
+      "size": 1666,
       "executable": false
     },
     {
       "path": "Icon.iconset/icon_32x32@2x.png",
-      "sha256": "4ba6db7e408c55121055b2e4ffc328503fd309d3b622146fccdf21c8ead14e7a",
-      "size": 34248,
+      "sha256": "93a485da34a9b07f5d3ceae697757c316253fcef379f1e30e8c9fc691492ab11",
+      "size": 4831,
       "executable": false
     },
     {
       "path": "Icon.iconset/icon_512x512.png",
-      "sha256": "02de06088680af682f8b734965ce0302cdfac3a98ef4d65ba0f7beb3cb4a4716",
-      "size": 719462,
+      "sha256": "0dae862aa75829a696139500a9eb55d6b1bd773ced1eef1d57e38f4340d9d1a0",
+      "size": 218762,
       "executable": false
     },
     {
       "path": "Icon.iconset/icon_512x512@2x.png",
-      "sha256": "324a1ba996fa85e9eb70cc7366b4fb3b67d6fb16ee41bc32433ea3ee5a45edde",
-      "size": 1776219,
+      "sha256": "2b3447dd94499fc013f6d30506d468087a682b6b93a3068948963ec937f1514d",
+      "size": 853129,
       "executable": false
     },
     {
@@ -114,14 +132,14 @@
     },
     {
       "path": "README.en.md",
-      "sha256": "4c3c1dd043804347a30ff478b8e0cfc602a0d17993f4d71545dbca2a72a5373d",
-      "size": 5022,
+      "sha256": "8b54243b1c04622849f96790c470010cabaf43e4bacd2120b950747282feec19",
+      "size": 5555,
       "executable": false
     },
     {
       "path": "README.md",
-      "sha256": "324a964852ca30e25a968b4961dfa8f2d51c2e6da983d9e06afbf35a95368c99",
-      "size": 4140,
+      "sha256": "05bc46f46cd58c4f1ca35a922957486b14075913b51d8a5baa0c0a37608ee241",
+      "size": 4629,
       "executable": false
     },
     {
@@ -174,8 +192,8 @@
     },
     {
       "path": "Scripts/generate_brand_assets.swift",
-      "sha256": "600d5bf609d84ea005e1c057bd0a3e189cf582b5dcedeed7d2030afcef9e00e6",
-      "size": 6899,
+      "sha256": "8c3e7d53684b723449f7e720395d73095095af4f0e6353ad6321827c372eaf25",
+      "size": 3448,
       "executable": false
     },
     {
@@ -198,8 +216,8 @@
     },
     {
       "path": "Scripts/package_app.sh",
-      "sha256": "9e0bfe74dcbc706c21ea2105e89951f54b880696523c5a2c19906255682d1af5",
-      "size": 13687,
+      "sha256": "dd88c1c538a9e76f5ad1c5506e687f62e59d1a1a5275e09acd09e3ccb7a623f3",
+      "size": 13733,
       "executable": true
     },
     {
@@ -396,8 +414,8 @@
     },
     {
       "path": "Sources/AppWink/HiddenBarController.swift",
-      "sha256": "d42d299b4b1ab9b64d62cc764321226b579a64aa5d003570b572e6738e0de337",
-      "size": 10487,
+      "sha256": "f92ae0b8f66921ad10d1c2cd064f7f59722acddc8d951676235ba205a92be6cc",
+      "size": 11141,
       "executable": false
     },
     {
@@ -744,8 +762,8 @@
     },
     {
       "path": "Sources/AppWinkCore/Resources/zh-Hans.lproj/Localizable.strings",
-      "sha256": "b91507b1356847dc426e1c36043bd1a46b5b24b559ba71d680a569a2fd08d077",
-      "size": 11773,
+      "sha256": "1430ff488ca2a7abdc14fe9d0bce21ebc23e77f658effa138d03a3bdecc0271e",
+      "size": 11776,
       "executable": false
     },
     {
@@ -977,6 +995,12 @@
       "executable": false
     },
     {
+      "path": "Tests/AppWinkTests/HiddenBarControllerTests.swift",
+      "sha256": "4d519376bd3a80f2dc21292632b5e95c1cc1c9b6cc0b01c8cc8483487b76f9a5",
+      "size": 3876,
+      "executable": false
+    },
+    {
       "path": "Tests/AppWinkTests/HiddenBarPresentationMetricsTests.swift",
       "sha256": "2a92da4c53557628895c6e49d93bde450aa5f59c1af9a825a991dffab5aeafa1",
       "size": 3182,
@@ -1121,15 +1145,33 @@
       "executable": false
     },
     {
+      "path": "docs/HIDDEN_BAR.md",
+      "sha256": "388aa9224ed7493cc83317a44dbd48345042369967e3471864bc34f7071e318d",
+      "size": 2367,
+      "executable": false
+    },
+    {
       "path": "docs/PUBLIC_GUIDE.md",
-      "sha256": "2f8f5462757a9628cd3ae53e8d6e84a58118316a6eb752d2f2dedc44503fd58e",
-      "size": 6887,
+      "sha256": "2423b8d52ac7bb8afeb07c959ba18de717d2c7fca1f2a739e6333a4f664e9727",
+      "size": 7779,
       "executable": false
     },
     {
       "path": "docs/README.md",
-      "sha256": "79228810e4cff68ee54db55576f75198b9cb5dc6885c35375fa6e499be9ae7eb",
-      "size": 362,
+      "sha256": "12b4bca4fda3247161671c6c4a89cc0c32ae34536d1069e4089157ba98659a0a",
+      "size": 465,
+      "executable": false
+    },
+    {
+      "path": "docs/images/hotkey-configuration.jpg",
+      "sha256": "c0f08ccde8d959eac6cc448fe7bf06bcf086bc49eb536bb8fdb597546b177e2c",
+      "size": 183869,
+      "executable": false
+    },
+    {
+      "path": "docs/images/virtual-keyboard.jpg",
+      "sha256": "f6c89c7d75c5c455f1900964a79db8be7f7aeff481e8bd17594ade03600e5940",
+      "size": 268821,
       "executable": false
     },
     {
@@ -1151,8 +1193,14 @@
       "executable": false
     },
     {
+      "path": "docs/releases/v0.1.46.md",
+      "sha256": "c822e88b2132d4a5c090ea762ba0e2fde99c179f33330294e79b3f90a18ab3b5",
+      "size": 1785,
+      "executable": false
+    },
+    {
       "path": "version.env",
-      "sha256": "7f6c6152c43eb91045944dcfb137cc552f48e08065885b7794feb53c61cff64b",
+      "sha256": "0f9d25fad18815b7fd65c9fea7dca5c7d787a6499ba95fc3ec7d9b544a32727e",
       "size": 41,
       "executable": false
     }
