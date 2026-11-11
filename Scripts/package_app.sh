@@ -82,7 +82,8 @@ APP="$ROOT/${APP_BUNDLE_NAME}.app"
 rm -rf "$APP"
 mkdir -p "$APP/Contents/MacOS" "$APP/Contents/Resources" "$APP/Contents/Frameworks"
 
-# Convert a source iconset/icon asset to Icon.icns if present (requires iconutil).
+# Regenerate pixel-exact icons from the master before converting to Icon.icns.
+swift "$ROOT/Scripts/generate_brand_assets.swift"
 ICON_ICONSET_SOURCE="$ROOT/Icon.iconset"
 ICON_COMPOSER_SOURCE="$ROOT/Icon.icon"
 ICON_TARGET="$ROOT/Icon.icns"
