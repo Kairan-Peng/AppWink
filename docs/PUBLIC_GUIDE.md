@@ -144,4 +144,4 @@ service operational until affected users have a working free upgrade path.
 
 Report security problems following [SECURITY.md](../SECURITY.md). Review the
 [license](../LICENSE), [third-party notices](../THIRD_PARTY_NOTICES.md) and
-[release notes](releases/v0.1.45.md) before distribution.
+[release notes](releases/v0.1.46.md) before distribution.
