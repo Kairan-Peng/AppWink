@@ -108,11 +108,7 @@ final class HiddenBarController: NSObject {
 
     func setEnabled(_ isEnabled: Bool) {
         if isEnabled {
-            let wasFullyInstalled = arrowItem != nil && pusherItem != nil
             installIfNeeded()
-            if !wasFullyInstalled {
-                collapse()
-            }
         } else {
             removeItems()
         }
@@ -130,16 +126,20 @@ final class HiddenBarController: NSObject {
 
         removeItems()
 
+        // macOS 27 can restore the old pusher to the arrow's right, hiding
+        // our own control. Fresh, stable names reset only this pair's layout.
+        let placementSuffix = HiddenBarPresentationMetrics.collapsePolicy() == .macOS27Capped
+            ? ".layout-v2" : ""
         let statusBar = NSStatusBar.system
         let arrowItem = statusBar.statusItem(withLength: HiddenBarPresentationMetrics.arrowLength)
-        arrowItem.autosaveName = NSStatusItem.AutosaveName(Constants.arrowAutosaveName)
+        arrowItem.autosaveName = NSStatusItem.AutosaveName(Constants.arrowAutosaveName + placementSuffix)
         guard let arrowButton = arrowItem.button else {
             statusBar.removeStatusItem(arrowItem)
             return
         }
 
-        let pusherItem = statusBar.statusItem(withLength: collapsedPusherLength())
-        pusherItem.autosaveName = NSStatusItem.AutosaveName(Constants.pusherAutosaveName)
+        let pusherItem = statusBar.statusItem(withLength: HiddenBarPresentationMetrics.expandedBoundaryLength)
+        pusherItem.autosaveName = NSStatusItem.AutosaveName(Constants.pusherAutosaveName + placementSuffix)
         pusherItem.button?.title = ""
         pusherItem.button?.image = nil
         pusherItem.button?.imagePosition = .noImage
@@ -152,7 +152,20 @@ final class HiddenBarController: NSObject {
 
         self.pusherItem = pusherItem
         self.arrowItem = arrowItem
+        state = .expanded
         updatePresentation()
+
+        // Register both compact items before applying menu-bar layout pressure.
+        let generation = timerGeneration
+        DispatchQueue.main.async { [weak self] in
+            guard let self,
+                  self.timerGeneration == generation,
+                  self.arrowItem === arrowItem,
+                  self.pusherItem === pusherItem else {
+                return
+            }
+            self.collapse()
+        }
     }
 
     @objc private func toggleHiddenBar() {
