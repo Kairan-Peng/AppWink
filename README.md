@@ -14,7 +14,7 @@ AppWink 是一个免费开源的 macOS 小工具，帮助从 Windows 转来的�
 
 把常用应用、文件夹和文件集中管理，为它们设置顺手的快捷键，按下即达。
 
-![AppWink 热键配置窗口：应用列表、快捷键和独立开关](docs/images/hotkey-configuration.jpg)
+![AppWink 热键配置窗口：蓝色眨眼键帽 Logo、应用列表、快捷键和独立开关](docs/images/hotkey-configuration.jpg)
 
 ### 虚拟键盘
 

@@ -1,7 +1,7 @@
 {
-  "version": "0.1.46",
-  "build": 47,
-  "source_tree_sha256": "a72a28437f5c63be393d24f3f56ccf5ea7604fea307294ef5285e07eb16e4553",
+  "version": "0.1.47",
+  "build": 48,
+  "source_tree_sha256": "a4324a19a91f6c882f43e46d51c5cef0fd373c0edb7cc03933005a7f23af48e9",
   "scope": "reviewed current source without prior Git history or internal operational records",
   "files": [
     {
@@ -36,8 +36,8 @@
     },
     {
       "path": "Artwork/README.md",
-      "sha256": "94615ba55c0e9a401565698bb491efeba18e896a11a6efe5d1d9af5bf97ac487",
-      "size": 854,
+      "sha256": "93021caec79e5f78fddebafc9d2b1a9873c8aedbf89795affa46e43736ee590d",
+      "size": 1152,
       "executable": false
     },
     {
@@ -132,14 +132,14 @@
     },
     {
       "path": "README.en.md",
-      "sha256": "a8a67c4915826906638af97051989fc83df6e1f88cd153132816bc443f75c6e7",
-      "size": 5555,
+      "sha256": "0f530df5a79e7f7d9b098f96da0d0c052021e51c4a54e599b5c7971214e0166b",
+      "size": 5585,
       "executable": false
     },
     {
       "path": "README.md",
-      "sha256": "1625e0a95ec46e420a34cda0af30a2c922f1e5ef8539f49253fc49202ad97647",
-      "size": 4629,
+      "sha256": "5bad2406c47408465665c5f09feb89b74fe2b9ee1fa7a8a10d8260186a11b719",
+      "size": 4655,
       "executable": false
     },
     {
@@ -636,8 +636,8 @@
     },
     {
       "path": "Sources/AppWink/StatusBarIconProvider.swift",
-      "sha256": "9749d53ee3445497de8f5140a211ff99023c7dc3d1c384cef625e286d4cdda4b",
-      "size": 1814,
+      "sha256": "358c9e6f8e5bf2e56fc9f5faaa8ccf98f7b214123554f3336a800c9bb15e8960",
+      "size": 1778,
       "executable": false
     },
     {
@@ -1152,26 +1152,26 @@
     },
     {
       "path": "docs/PUBLIC_GUIDE.md",
-      "sha256": "2423b8d52ac7bb8afeb07c959ba18de717d2c7fca1f2a739e6333a4f664e9727",
-      "size": 7779,
+      "sha256": "f9a20899494d758635ad7b44101d75b5f19cae687baace94d6a9775e0e7f7272",
+      "size": 7985,
       "executable": false
     },
     {
       "path": "docs/README.md",
-      "sha256": "12b4bca4fda3247161671c6c4a89cc0c32ae34536d1069e4089157ba98659a0a",
-      "size": 465,
+      "sha256": "0859d801668ab03ad6a1cf8d3cc9769fc87b3011b22442c2d4196ca2bbd9b769",
+      "size": 511,
       "executable": false
     },
     {
       "path": "docs/images/hotkey-configuration.jpg",
-      "sha256": "c0f08ccde8d959eac6cc448fe7bf06bcf086bc49eb536bb8fdb597546b177e2c",
-      "size": 183869,
+      "sha256": "fa4bd044dcc5a29e2daa5099ad73aaec6cf46d597867fd65b807cab15ab84157",
+      "size": 187338,
       "executable": false
     },
     {
       "path": "docs/images/virtual-keyboard.jpg",
-      "sha256": "f6c89c7d75c5c455f1900964a79db8be7f7aeff481e8bd17594ade03600e5940",
-      "size": 268821,
+      "sha256": "a69350b01c739f504e0d266291d4808db4e5a6a74a83d7217da939d92ec29fa5",
+      "size": 271645,
       "executable": false
     },
     {
@@ -1199,8 +1199,14 @@
       "executable": false
     },
     {
+      "path": "docs/releases/v0.1.47.md",
+      "sha256": "5b3baa7e006e76b009b2f3a11003e8b641432c19ce314ab81972253d982209b9",
+      "size": 1015,
+      "executable": false
+    },
+    {
       "path": "version.env",
-      "sha256": "0f9d25fad18815b7fd65c9fea7dca5c7d787a6499ba95fc3ec7d9b544a32727e",
+      "sha256": "f74e11b9cd7d8e07f992149d0f385adfd3f5c33688f32d2619d7c90feb5236c4",
       "size": 41,
       "executable": false
     }
