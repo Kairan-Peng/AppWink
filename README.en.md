@@ -6,7 +6,7 @@ AppWink is a free, open-source macOS utility that helps people coming from Windo
 
 It offers shortcuts for apps, folders, and files, along with practical tools for displaying keystrokes, adjusting mouse scrolling, working with Finder, managing menu bar icons, and monitoring network speed. The current source requires no purchase, trial, activation, or sign-in.
 
-> Latest release: [0.1.45](https://github.com/Kairan-Peng/AppWink/releases/tag/v0.1.45). [Download universal DMG](https://github.com/Kairan-Peng/AppWink/releases/download/v0.1.45/AppWink-v0.1.45-build46-mac.dmg) · [SHA-256](https://github.com/Kairan-Peng/AppWink/releases/download/v0.1.45/AppWink-v0.1.45-build46-mac.dmg.sha256)
+> Latest release: [0.1.46](https://github.com/Kairan-Peng/AppWink/releases/tag/v0.1.46). [Download universal DMG](https://github.com/Kairan-Peng/AppWink/releases/download/v0.1.46/AppWink-v0.1.46-build47-mac.dmg) · [SHA-256](https://github.com/Kairan-Peng/AppWink/releases/download/v0.1.46/AppWink-v0.1.46-build47-mac.dmg.sha256)
 
 ## Screenshots
 
