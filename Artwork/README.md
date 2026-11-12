@@ -13,3 +13,8 @@ the ten `Icon.iconset` PNGs. The exporter applies the clean rounded outline,
 transparent padding, sRGB color space and exact pixel dimensions; keep the
 master square, opaque and at least 1024 pixels. Packaging regenerates the icons
 and converts them to the ignored `Icon.icns` automatically.
+
+The menu-bar symbol in `Sources/AppWink/StatusBarIconProvider.swift` follows the
+same rounded tile, inset keycap and mouth-free wink. It remains a native
+18-point monochrome template. When changing this artwork, update that symbol
+and recapture the README images as part of the same brand update.

@@ -14,7 +14,7 @@ It offers shortcuts for apps, folders, and files, along with practical tools for
 
 Keep your favorite apps, folders, and files together, and give each a shortcut that feels natural.
 
-![AppWink hotkey configuration window with app bindings, shortcuts, and individual switches](docs/images/hotkey-configuration.jpg)
+![AppWink hotkey configuration window with the blue winking keycap logo, app bindings, shortcuts, and individual switches](docs/images/hotkey-configuration.jpg)
 
 ### Virtual keyboard
 

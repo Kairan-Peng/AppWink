@@ -44,9 +44,11 @@ iconutil --convert icns --output Icon.icns Icon.iconset
 Packaging runs the generator and embeds the resulting `Icon.icns` automatically.
 The exporter uses exact pixel dimensions independently of the display's Retina
 scale. `Icon.icns` remains an ignored build artifact. Preview 16/32/64-pixel
-images and inspect an isolated app bundle after changing the master. The menu
-bar's monochrome template icon is maintained separately in
-`StatusBarIconProvider.swift`.
+images and inspect an isolated app bundle after changing the master. The menu-bar
+icon uses a monochrome version of the same rounded tile, keycap, curved wink
+and dot, with no mouth. `StatusBarIconProvider.swift` draws its 18-point template
+so macOS can adapt it to light and dark menu bars. Refresh that drawing and the
+README screenshots alongside future artwork changes.
 
 ## Runtime checks
 
@@ -144,4 +146,4 @@ service operational until affected users have a working free upgrade path.
 
 Report security problems following [SECURITY.md](../SECURITY.md). Review the
 [license](../LICENSE), [third-party notices](../THIRD_PARTY_NOTICES.md) and
-[release notes](releases/v0.1.46.md) before distribution.
+[release notes](releases/v0.1.47.md) before distribution.

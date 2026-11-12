@@ -13,41 +13,43 @@ enum StatusBarIconProvider {
         return image
     }()
 
-    /// 用键帽 + 眨眼笑脸组合出 AppWink 的状态栏识别图形。
+    /// 将应用图标的圆角外框、键帽和两只眼睛转为菜单栏单色模板。
     private static func draw(in rect: NSRect) {
         NSColor.black.setStroke()
         NSColor.black.setFill()
 
-        let keyRect = NSRect(
-            x: rect.minX + 1.8,
-            y: rect.minY + 2.2,
-            width: rect.width - 3.6,
-            height: rect.height - 4.4)
-        let keyPath = NSBezierPath(
-            roundedRect: keyRect,
+        let tilePath = NSBezierPath(
+            roundedRect: rect.insetBy(dx: 1, dy: 1),
             xRadius: 4.2,
             yRadius: 4.2)
-        keyPath.lineWidth = 1.7
-        keyPath.stroke()
+        let keyRect = NSRect(
+            x: rect.minX + 3.3,
+            y: rect.minY + 3.5,
+            width: rect.width - 6.6,
+            height: rect.height - 7)
+        let keyPath = NSBezierPath(
+            roundedRect: keyRect,
+            xRadius: 2.6,
+            yRadius: 2.6)
+        tilePath.append(keyPath)
+        tilePath.windingRule = .evenOdd
+        tilePath.fill()
 
         let wink = NSBezierPath()
         wink.lineCapStyle = .round
-        wink.lineWidth = 1.7
-        wink.move(to: NSPoint(x: rect.minX + 5.1, y: rect.minY + 10.8))
-        wink.line(to: NSPoint(x: rect.minX + 7.6, y: rect.minY + 11.2))
+        wink.lineWidth = 1.3
+        wink.move(to: NSPoint(x: rect.minX + 5.7, y: rect.minY + 9))
+        wink.curve(
+            to: NSPoint(x: rect.minX + 8, y: rect.minY + 9.8),
+            controlPoint1: NSPoint(x: rect.minX + 6.3, y: rect.minY + 9.6),
+            controlPoint2: NSPoint(x: rect.minX + 7.1, y: rect.minY + 9.9))
         wink.stroke()
 
-        let eyeDot = NSBezierPath(ovalIn: NSRect(x: rect.minX + 10.7, y: rect.minY + 9.8, width: 2.2, height: 2.2))
+        let eyeDot = NSBezierPath(ovalIn: NSRect(
+            x: rect.minX + 10.1,
+            y: rect.minY + 9,
+            width: 1.9,
+            height: 1.9))
         eyeDot.fill()
-
-        let smile = NSBezierPath()
-        smile.lineCapStyle = .round
-        smile.lineWidth = 1.45
-        smile.move(to: NSPoint(x: rect.minX + 5.1, y: rect.minY + 6.9))
-        smile.curve(
-            to: NSPoint(x: rect.minX + 11.9, y: rect.minY + 6.9),
-            controlPoint1: NSPoint(x: rect.minX + 6.9, y: rect.minY + 5.3),
-            controlPoint2: NSPoint(x: rect.minX + 10.1, y: rect.minY + 5.3))
-        smile.stroke()
     }
 }
