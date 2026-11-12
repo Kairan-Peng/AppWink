@@ -6,7 +6,7 @@ AppWink 是一个免费开源的 macOS 小工具，帮助从 Windows 转来的�
 
 支持应用、文件夹和文件快捷键，以及键盘显示、鼠标滚轮、Finder、菜单栏和网络监控等实用功能。当前源码无需购买、试用、激活或登录。
 
-> 最新版本：[0.1.46](https://github.com/Kairan-Peng/AppWink/releases/tag/v0.1.46)。[下载 universal DMG](https://github.com/Kairan-Peng/AppWink/releases/download/v0.1.46/AppWink-v0.1.46-build47-mac.dmg) · [SHA-256](https://github.com/Kairan-Peng/AppWink/releases/download/v0.1.46/AppWink-v0.1.46-build47-mac.dmg.sha256)
+> 最新版本：[0.1.47](https://github.com/Kairan-Peng/AppWink/releases/tag/v0.1.47)。[下载 universal DMG](https://github.com/Kairan-Peng/AppWink/releases/download/v0.1.47/AppWink-v0.1.47-build48-mac.dmg) · [SHA-256](https://github.com/Kairan-Peng/AppWink/releases/download/v0.1.47/AppWink-v0.1.47-build48-mac.dmg.sha256)
 
 ## 界面预览
 
